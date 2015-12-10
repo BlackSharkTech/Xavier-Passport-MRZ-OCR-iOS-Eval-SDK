@@ -52,7 +52,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Build Options Setting](./readme_images/build_options_setting.jpg)   
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Xavier Framework (highlighted in red)**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Xavier Framework highlighted in red (Figure 4)**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Xavier Framework](./readme_images/dependency_framework.jpg)   
 <br>
@@ -97,7 +97,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 <br>
 
 6. To capture MRZ data accurately, hold the document as close as possible to the camera and make sure the MRZ lines (either two-line or three-line document) fall within the rectangular box on the phonescreen.   
-7. The capturing screen displays a rectangular box in blue color (Figure 5 or Figure 8) when it is not detecting any MRZ lines. The rectangular box turns to green (Figure 6 or Figure 9) with a plus mark when it detects the MRZ lines.   
+7. The capturing screen displays a rectangular box in blue color (Figure 6 or Figure 9) when it is not detecting any MRZ lines. The rectangular box turns to green (Figure 7 or Figure 10) with a plus mark when it detects the MRZ lines.   
 8. The capturing screen automatically goes away under one of these three conditions:  
     1. When the MRZ lines are successfully captured.  
     2. When timeout has occurred and it returns the MRZ lines to the client application.  Timeout is currently set to 5 seconds. 

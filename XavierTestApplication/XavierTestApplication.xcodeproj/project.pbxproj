@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D357EEBF1C0D189D007AA8A5 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = D357EEBA1C0D08B5007AA8A5 /* tessdata */; };
-		D357EECD1C0D1E01007AA8A5 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D357EEBC1C0D1330007AA8A5 /* opencv2.framework */; };
-		D357EECF1C0D1E49007AA8A5 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DD029E1BFE8EAE00F3B946 /* libstdc++.6.tbd */; };
-		D357EED01C0D1E5A007AA8A5 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DD029F1BFE8EAE00F3B946 /* libstdc++.tbd */; };
+		D35780251C1A29FC00951631 /* Xavier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D35780221C1A286900951631 /* Xavier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D357802A1C1A2D2800951631 /* Xavier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35780221C1A286900951631 /* Xavier.framework */; };
 		D3DD02861BFE8C6300F3B946 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD02851BFE8C6300F3B946 /* main.m */; };
 		D3DD02891BFE8C6300F3B946 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD02881BFE8C6300F3B946 /* AppDelegate.m */; };
 		D3DD028C1BFE8C6300F3B946 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD028B1BFE8C6300F3B946 /* ViewController.m */; };
@@ -18,15 +16,24 @@
 		D3DD02921BFE8C6300F3B946 /* XavierTestApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3DD02901BFE8C6300F3B946 /* XavierTestApplication.xcdatamodeld */; };
 		D3DD02941BFE8C6300F3B946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3DD02931BFE8C6300F3B946 /* Assets.xcassets */; };
 		D3DD02971BFE8C6300F3B946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DD02951BFE8C6300F3B946 /* LaunchScreen.storyboard */; };
-		D3DD02A81BFE941400F3B946 /* libXavier.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DD02A41BFE8EDA00F3B946 /* libXavier.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D35780261C1A29FC00951631 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D35780251C1A29FC00951631 /* Xavier.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		D357EEA21C04F05E007AA8A5 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		D357EEBA1C0D08B5007AA8A5 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = XavierDependencies/tessdata; sourceTree = "<group>"; };
-		D357EEBC1C0D1330007AA8A5 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = XavierDependencies/opencv2.framework; sourceTree = "<group>"; };
-		D357EEC41C0D1BDB007AA8A5 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
-		D357EEC51C0D1BDB007AA8A5 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		D35780221C1A286900951631 /* Xavier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Xavier.framework; path = XavierDependencies/Xavier.framework; sourceTree = "<group>"; };
 		D3DD02811BFE8C6300F3B946 /* XavierTestApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XavierTestApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DD02851BFE8C6300F3B946 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D3DD02871BFE8C6300F3B946 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,9 +45,6 @@
 		D3DD02931BFE8C6300F3B946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3DD02961BFE8C6300F3B946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3DD02981BFE8C6300F3B946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3DD029E1BFE8EAE00F3B946 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
-		D3DD029F1BFE8EAE00F3B946 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		D3DD02A41BFE8EDA00F3B946 /* libXavier.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libXavier.a; path = XavierDependencies/libXavier.a; sourceTree = "<group>"; };
 		D3DD02A61BFE8F5500F3B946 /* SCIMetrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCIMetrics.h; sourceTree = "<group>"; };
 		D3DD02A71BFE8F5500F3B946 /* SCIXavierViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCIXavierViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,10 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D357EED01C0D1E5A007AA8A5 /* libstdc++.tbd in Frameworks */,
-				D357EECF1C0D1E49007AA8A5 /* libstdc++.6.tbd in Frameworks */,
-				D357EECD1C0D1E01007AA8A5 /* opencv2.framework in Frameworks */,
-				D3DD02A81BFE941400F3B946 /* libXavier.a in Frameworks */,
+				D357802A1C1A2D2800951631 /* Xavier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,14 +64,7 @@
 		D3DD02781BFE8C6300F3B946 = {
 			isa = PBXGroup;
 			children = (
-				D357EEC41C0D1BDB007AA8A5 /* libc++.1.tbd */,
-				D357EEC51C0D1BDB007AA8A5 /* libc++abi.tbd */,
-				D357EEBC1C0D1330007AA8A5 /* opencv2.framework */,
-				D357EEBA1C0D08B5007AA8A5 /* tessdata */,
-				D357EEA21C04F05E007AA8A5 /* libc++.tbd */,
-				D3DD02A41BFE8EDA00F3B946 /* libXavier.a */,
-				D3DD029E1BFE8EAE00F3B946 /* libstdc++.6.tbd */,
-				D3DD029F1BFE8EAE00F3B946 /* libstdc++.tbd */,
+				D35780221C1A286900951631 /* Xavier.framework */,
 				D3DD02831BFE8C6300F3B946 /* XavierTestApplication */,
 				D3DD02821BFE8C6300F3B946 /* Products */,
 			);
@@ -121,6 +115,7 @@
 				D3DD027D1BFE8C6300F3B946 /* Sources */,
 				D3DD027E1BFE8C6300F3B946 /* Frameworks */,
 				D3DD027F1BFE8C6300F3B946 /* Resources */,
+				D35780261C1A29FC00951631 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,7 +163,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D357EEBF1C0D189D007AA8A5 /* tessdata in Resources */,
 				D3DD02971BFE8C6300F3B946 /* LaunchScreen.storyboard in Resources */,
 				D3DD02941BFE8C6300F3B946 /* Assets.xcassets in Resources */,
 				D3DD028F1BFE8C6300F3B946 /* Main.storyboard in Resources */,
@@ -304,6 +298,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/XavierDependencies",
 				);
+				GCC_LINK_WITH_DYNAMIC_LIBRARIES = YES;
 				INFOPLIST_FILE = XavierTestApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -328,6 +323,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/XavierDependencies",
 				);
+				GCC_LINK_WITH_DYNAMIC_LIBRARIES = YES;
 				INFOPLIST_FILE = XavierTestApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

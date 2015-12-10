@@ -35,9 +35,9 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 
 ####Getting the latest Xavier Evaluation SDK from GitHub  
 
-1. Download the XavierTestApplication project. This is a self contained Xavier Evaluation project which contains the Xavier.framework for you to run the demo application on the iPhone.
+1. Download the XavierTestApplication project. This is a self contained Xavier Evaluation project which includes the Xavier.framework for you to run the demo application on the iPhone.
  
-2. Open the XavierTestApplication project using the Xcode IDE and compile the project. If you integrate the Xavier.framework into your application, please make sure you have the similar setting as the Xavier Evaluation SDK.  Here are all the Xavier Evaluation SDK settings screenshots:
+2. Open the XavierTestApplication project using the Xcode IDE and compile the project. To integrate the Xavier.framework into your application, please make sure you have the similar setting as the Xavier Evaluation SDK.  Here are all the Xavier Evaluation SDK settings:
 <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**General Setting (Figure 1)**

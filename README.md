@@ -133,7 +133,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
  */
 -(void) <b>onMrzCaptureCompleted</b>
 {
-    // MRZ capture is completed
+    // MRZ capture complete event
 }
 
 /**

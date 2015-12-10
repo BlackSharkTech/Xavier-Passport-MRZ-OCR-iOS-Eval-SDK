@@ -125,14 +125,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
  */
 -(void) <b>onRawMrz</b>: (NSString*) rawMrz
 {
-    NSLog(@"\n=====> onRawMrz() - %@", rawMrz);
-    
-    [self insertToTextView :@"Raw MRZ:\n"];
-    [self insertToTextView :@"========\n"];
-    
-    [self insertToTextView :rawMrz];
-    [self insertToTextView :@"\n"];
-  
+    // Raw MRZ lines
 }
 
 /**
@@ -140,8 +133,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
  */
 -(void) <b>onMrzCaptureCompleted</b>
 {
-    NSLog(@"\n=====> onMrzCaptureCompleted()");
-    
+    // MRZ capture is completed
 }
 
 /**
@@ -149,12 +141,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
  */
 -(void) <b>onError</b>: (NSString*) errorMessage
 {
-    NSLog(@"\n=====> onError() - %@", errorMessage);
-    
-    [self insertToTextView :@"Error:\n"];
-    [self insertToTextView :@"======\n"];
-    
-    [self insertToTextView :errorMessage];
+	// MRZ capturing encountered errors
 }
 
 /**
@@ -162,13 +149,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
  */
 -(void) <b>onParsedXmlFromlMrz</b>: (NSString*) parsedXmFromlMrz
 {
-    NSLog(@"\n\n=====> onParsedXmlFromlMrz() - %@", parsedXmFromlMrz);
-    
-    [self insertToTextView :@"XML from MRZ:\n"];
-    [self insertToTextView :@"===========\n"];
-    
-    [self insertToTextView :parsedXmFromlMrz];
-    [self insertToTextView :@"\n"];
+	// Parsed MRZ in XML fromat
 }
 
 /**
@@ -176,27 +157,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
  */
 -(void) <b>onMetrics</b>: (SCIMetrics*) metrics
 {
-    NSLog(@"\n\n=====> onMetrics()");
-
-    [self insertToTextView :@"Metrics:\n"];
-    [self insertToTextView :@"======\n"];
-    
-    [self insertToTextView :@"Total OCR time: "];
-    [self insertToTextView :[NSString stringWithFormat:@"%f", metrics.endOfWidget - metrics.startOfWidget]];
-    [self insertToTextView :@" (secs)\n"];
-    
-    [self insertToTextView :@"Number of MRZ candidates found: "];
-    [self insertToTextView :[NSString stringWithFormat:@"%i", metrics.numberOfCandidates]];
-    [self insertToTextView :@"\n"];
-
-    [self insertToTextView :@"Number of scans: "];
-    [self insertToTextView :[NSString stringWithFormat:@"%i", metrics.numberOfScans]];
-    [self insertToTextView :@"\n"];
-    
-    [self insertToTextView :@"Image analysis average duration: "];
-    [self insertToTextView :[NSString stringWithFormat:@"%f", metrics.imageAnalysis]];
-    [self insertToTextView :@" (secs)\n"];
-    [self insertToTextView :@"\n"];
+	// Captured Metrics data for analysis purpose    
 }
 </code></pre>  
 

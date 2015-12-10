@@ -46,7 +46,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Architectures Setting (Figure 2)**
 
-![Architecture Setting](./readme_images/architecture_setting.jpg)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Architecture Setting](./readme_images/architecture_setting.jpg)   
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Build Options Setting (Figure 3)**
 

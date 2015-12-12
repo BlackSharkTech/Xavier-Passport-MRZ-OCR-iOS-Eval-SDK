@@ -3,7 +3,7 @@
 //
 //  Copyright (c) 2014 SimonComputing. All rights reserved.
 //
-#include "SCIObfuscation.h"
+
 #import <UIKit/UIKit.h>
 
 @interface SCIMetrics : NSObject

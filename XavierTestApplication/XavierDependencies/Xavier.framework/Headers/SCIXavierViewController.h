@@ -9,7 +9,7 @@
 #import "SCIImageProcessor.h"
 #import "SCIMetrics.h"
 #import  "SCIXavierWidgetView.h"
-#include "SCIObfuscation.h"
+
 
 @protocol SCIXavierClientProtocol <NSObject>
 

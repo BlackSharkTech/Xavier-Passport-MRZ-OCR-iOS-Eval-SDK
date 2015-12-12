@@ -5,8 +5,8 @@
 //
 
 #import <AVFoundation/AVFoundation.h>
-#import "SCIXavierViewController.h"
-
+#import <Xavier/SCIXavierViewController.h>
+#import <Xavier/SCIMetrics.h>
 
 @interface ViewController : UIViewController <SCIXavierClientProtocol>
 

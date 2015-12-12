@@ -4,21 +4,29 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/SCIImageProcessor.h</key>
+		<data>
+		qaguvUgf1+DaVsOZWj/rmPxj7k0=
+		</data>
+		<key>Headers/SCIMetrics.h</key>
+		<data>
+		/cKV4JSxQ/0KJPzrolC3p9pkjYE=
+		</data>
+		<key>Headers/SCIMrzProcessor.h</key>
+		<data>
+		hze7svrpOvVk3lHV4l+VAauzZuw=
+		</data>
 		<key>Headers/SCIXavierViewController.h</key>
 		<data>
-		U3Xj6tbFjwk0Pi0dk/d55SuF9qc=
+		ucvAK5I37OGBa+Jl71XXLEXee4A=
 		</data>
-		<key>Headers/Xavier.h</key>
+		<key>Headers/SCIXavierWidgetView.h</key>
 		<data>
-		O7JTuvpRlZXQ5SabkF2ev+DQIDM=
+		xGyVkYHVKD4KMSOyVJAmgHkH8ws=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QZ0RnB4IETQoJ/fSUHqA4LYBb4E=
-		</data>
-		<key>Modules/module.modulemap</key>
-		<data>
-		D4+cg0EbzicnFpdpf6UXqYf4hYU=
+		7w4XXIaMuuec2cZyCGn4lMsvDDk=
 		</data>
 		<key>tessdata/eng.traineddata</key>
 		<data>
@@ -631,17 +639,25 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/SCIImageProcessor.h</key>
+		<data>
+		qaguvUgf1+DaVsOZWj/rmPxj7k0=
+		</data>
+		<key>Headers/SCIMetrics.h</key>
+		<data>
+		/cKV4JSxQ/0KJPzrolC3p9pkjYE=
+		</data>
+		<key>Headers/SCIMrzProcessor.h</key>
+		<data>
+		hze7svrpOvVk3lHV4l+VAauzZuw=
+		</data>
 		<key>Headers/SCIXavierViewController.h</key>
 		<data>
-		U3Xj6tbFjwk0Pi0dk/d55SuF9qc=
+		ucvAK5I37OGBa+Jl71XXLEXee4A=
 		</data>
-		<key>Headers/Xavier.h</key>
+		<key>Headers/SCIXavierWidgetView.h</key>
 		<data>
-		O7JTuvpRlZXQ5SabkF2ev+DQIDM=
-		</data>
-		<key>Modules/module.modulemap</key>
-		<data>
-		D4+cg0EbzicnFpdpf6UXqYf4hYU=
+		xGyVkYHVKD4KMSOyVJAmgHkH8ws=
 		</data>
 		<key>tessdata/eng.traineddata</key>
 		<data>

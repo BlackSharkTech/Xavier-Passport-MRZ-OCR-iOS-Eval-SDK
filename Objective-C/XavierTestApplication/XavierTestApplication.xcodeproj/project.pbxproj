@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D35780251C1A29FC00951631 /* Xavier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D35780221C1A286900951631 /* Xavier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D3690B661C20C0BC0027D66E /* Xavier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35780221C1A286900951631 /* Xavier.framework */; };
 		D3DD02861BFE8C6300F3B946 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD02851BFE8C6300F3B946 /* main.m */; };
 		D3DD02891BFE8C6300F3B946 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD02881BFE8C6300F3B946 /* AppDelegate.m */; };
 		D3DD028C1BFE8C6300F3B946 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD028B1BFE8C6300F3B946 /* ViewController.m */; };
@@ -16,6 +15,8 @@
 		D3DD02921BFE8C6300F3B946 /* XavierTestApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3DD02901BFE8C6300F3B946 /* XavierTestApplication.xcdatamodeld */; };
 		D3DD02941BFE8C6300F3B946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3DD02931BFE8C6300F3B946 /* Assets.xcassets */; };
 		D3DD02971BFE8C6300F3B946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DD02951BFE8C6300F3B946 /* LaunchScreen.storyboard */; };
+		D3F044711C34950D002F1E65 /* Xavier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35780221C1A286900951631 /* Xavier.framework */; };
+		D3F044881C35E0AA002F1E65 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = D3F0447E1C34A88C002F1E65 /* tessdata */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		D3DD02931BFE8C6300F3B946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3DD02961BFE8C6300F3B946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3DD02981BFE8C6300F3B946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3F0447E1C34A88C002F1E65 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = ../XavierDependencies/tessdata; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3690B661C20C0BC0027D66E /* Xavier.framework in Frameworks */,
+				D3F044711C34950D002F1E65 /* Xavier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +81,7 @@
 		D3DD02831BFE8C6300F3B946 /* XavierTestApplication */ = {
 			isa = PBXGroup;
 			children = (
+				D3F0447E1C34A88C002F1E65 /* tessdata */,
 				D3DD02871BFE8C6300F3B946 /* AppDelegate.h */,
 				D3DD02881BFE8C6300F3B946 /* AppDelegate.m */,
 				D3DD028A1BFE8C6300F3B946 /* ViewController.h */,
@@ -159,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F044881C35E0AA002F1E65 /* tessdata in Resources */,
 				D3DD02971BFE8C6300F3B946 /* LaunchScreen.storyboard in Resources */,
 				D3DD02941BFE8C6300F3B946 /* Assets.xcassets in Resources */,
 				D3DD028F1BFE8C6300F3B946 /* Main.storyboard in Resources */,
@@ -305,7 +309,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.simoncomputing.XavierTestApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -331,7 +335,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.simoncomputing.XavierTestApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};

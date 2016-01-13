@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F4628C11C18F754004AFDEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4628C01C18F754004AFDEA /* AppDelegate.swift */; };
+		1F4628C31C18F778004AFDEA /* XavierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4628C21C18F778004AFDEA /* XavierViewController.swift */; };
+		D322F32C1C470E0B00BE171D /* Xavier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D322F32B1C470E0B00BE171D /* Xavier.framework */; };
+		D322F32D1C470E0B00BE171D /* Xavier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D322F32B1C470E0B00BE171D /* Xavier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3DD028F1BFE8C6300F3B946 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DD028D1BFE8C6300F3B946 /* Main.storyboard */; };
+		D3DD02921BFE8C6300F3B946 /* XavierTestApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3DD02901BFE8C6300F3B946 /* XavierTestApplication.xcdatamodeld */; };
+		D3DD02941BFE8C6300F3B946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3DD02931BFE8C6300F3B946 /* Assets.xcassets */; };
+		D3DD02971BFE8C6300F3B946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DD02951BFE8C6300F3B946 /* LaunchScreen.storyboard */; };
+		D3DD02AA1BFE949600F3B946 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = D3DD02A91BFE949600F3B946 /* tessdata */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1F75513B1C1B8F640067358E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D322F32D1C470E0B00BE171D /* Xavier.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1F4628BF1C18F754004AFDEA /* XavierTestApplication-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XavierTestApplication-Bridging-Header.h"; sourceTree = "<group>"; };
+		1F4628C01C18F754004AFDEA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F4628C21C18F778004AFDEA /* XavierViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XavierViewController.swift; sourceTree = "<group>"; };
+		D322F32B1C470E0B00BE171D /* Xavier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Xavier.framework; path = XavierDependencies/Xavier.framework; sourceTree = "<group>"; };
+		D3DD02811BFE8C6300F3B946 /* XavierTestApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XavierTestApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3DD028E1BFE8C6300F3B946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D3DD02911BFE8C6300F3B946 /* XavierTestApplication.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XavierTestApplication.xcdatamodel; sourceTree = "<group>"; };
+		D3DD02931BFE8C6300F3B946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3DD02961BFE8C6300F3B946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3DD02981BFE8C6300F3B946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3DD029E1BFE8EAE00F3B946 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		D3DD029F1BFE8EAE00F3B946 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		D3DD02A91BFE949600F3B946 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = XavierDependencies/tessdata; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3DD027E1BFE8C6300F3B946 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D322F32C1C470E0B00BE171D /* Xavier.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D3DD02781BFE8C6300F3B946 = {
+			isa = PBXGroup;
+			children = (
+				D322F32B1C470E0B00BE171D /* Xavier.framework */,
+				D3DD02A91BFE949600F3B946 /* tessdata */,
+				D3DD029E1BFE8EAE00F3B946 /* libstdc++.6.tbd */,
+				D3DD029F1BFE8EAE00F3B946 /* libstdc++.tbd */,
+				D3DD02831BFE8C6300F3B946 /* XavierTestApplication */,
+				D3DD02821BFE8C6300F3B946 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D3DD02821BFE8C6300F3B946 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3DD02811BFE8C6300F3B946 /* XavierTestApplication.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3DD02831BFE8C6300F3B946 /* XavierTestApplication */ = {
+			isa = PBXGroup;
+			children = (
+				1F4628C21C18F778004AFDEA /* XavierViewController.swift */,
+				1F4628BF1C18F754004AFDEA /* XavierTestApplication-Bridging-Header.h */,
+				1F4628C01C18F754004AFDEA /* AppDelegate.swift */,
+				D3DD028D1BFE8C6300F3B946 /* Main.storyboard */,
+				D3DD02931BFE8C6300F3B946 /* Assets.xcassets */,
+				D3DD02951BFE8C6300F3B946 /* LaunchScreen.storyboard */,
+				D3DD02981BFE8C6300F3B946 /* Info.plist */,
+				D3DD02901BFE8C6300F3B946 /* XavierTestApplication.xcdatamodeld */,
+				D3DD02841BFE8C6300F3B946 /* Supporting Files */,
+			);
+			path = XavierTestApplication;
+			sourceTree = "<group>";
+		};
+		D3DD02841BFE8C6300F3B946 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3DD02801BFE8C6300F3B946 /* XavierTestApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3DD029B1BFE8C6300F3B946 /* Build configuration list for PBXNativeTarget "XavierTestApplication" */;
+			buildPhases = (
+				D3DD027D1BFE8C6300F3B946 /* Sources */,
+				D3DD027E1BFE8C6300F3B946 /* Frameworks */,
+				D3DD027F1BFE8C6300F3B946 /* Resources */,
+				1F75513B1C1B8F640067358E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XavierTestApplication;
+			productName = XavierTestApplication;
+			productReference = D3DD02811BFE8C6300F3B946 /* XavierTestApplication.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3DD02791BFE8C6300F3B946 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = SimonComputing;
+				TargetAttributes = {
+					D3DD02801BFE8C6300F3B946 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = ZHDP7G5M37;
+					};
+				};
+			};
+			buildConfigurationList = D3DD027C1BFE8C6300F3B946 /* Build configuration list for PBXProject "XavierTestApplication" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3DD02781BFE8C6300F3B946;
+			productRefGroup = D3DD02821BFE8C6300F3B946 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3DD02801BFE8C6300F3B946 /* XavierTestApplication */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3DD027F1BFE8C6300F3B946 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3DD02971BFE8C6300F3B946 /* LaunchScreen.storyboard in Resources */,
+				D3DD02AA1BFE949600F3B946 /* tessdata in Resources */,
+				D3DD02941BFE8C6300F3B946 /* Assets.xcassets in Resources */,
+				D3DD028F1BFE8C6300F3B946 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3DD027D1BFE8C6300F3B946 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3DD02921BFE8C6300F3B946 /* XavierTestApplication.xcdatamodeld in Sources */,
+				1F4628C11C18F754004AFDEA /* AppDelegate.swift in Sources */,
+				1F4628C31C18F778004AFDEA /* XavierViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D3DD028D1BFE8C6300F3B946 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3DD028E1BFE8C6300F3B946 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D3DD02951BFE8C6300F3B946 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3DD02961BFE8C6300F3B946 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3DD02991BFE8C6300F3B946 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3DD029A1BFE8C6300F3B946 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3DD029C1BFE8C6300F3B946 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XavierDependencies",
+				);
+				INFOPLIST_FILE = XavierTestApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XavierDependencies",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simoncomputing.XavierTestApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "XavierTestApplication/XavierTestApplication-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Debug;
+		};
+		D3DD029D1BFE8C6300F3B946 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XavierDependencies",
+				);
+				INFOPLIST_FILE = XavierTestApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XavierDependencies",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simoncomputing.XavierTestApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "XavierTestApplication/XavierTestApplication-Bridging-Header.h";
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3DD027C1BFE8C6300F3B946 /* Build configuration list for PBXProject "XavierTestApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3DD02991BFE8C6300F3B946 /* Debug */,
+				D3DD029A1BFE8C6300F3B946 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3DD029B1BFE8C6300F3B946 /* Build configuration list for PBXNativeTarget "XavierTestApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3DD029C1BFE8C6300F3B946 /* Debug */,
+				D3DD029D1BFE8C6300F3B946 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D3DD02901BFE8C6300F3B946 /* XavierTestApplication.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3DD02911BFE8C6300F3B946 /* XavierTestApplication.xcdatamodel */,
+			);
+			currentVersion = D3DD02911BFE8C6300F3B946 /* XavierTestApplication.xcdatamodel */;
+			path = XavierTestApplication.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D3DD02791BFE8C6300F3B946 /* Project object */;
+}

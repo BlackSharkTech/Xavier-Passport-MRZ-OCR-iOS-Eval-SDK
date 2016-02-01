@@ -8,7 +8,7 @@
 <br>
 **Description**  
 
-The Xavier SDK contains a demo application that demonstrates the API calls you can use to interact with the Xavier Library. The Xavier SDK is an iOS SDK that enables the developers to integrate the ability to scan International Civil Aviation Organization (ICAO) compliant two-line passport traveldocuments and three-line ID cards. Some sample documents that Xavier SDK can process are:
+The Xavier SDK contains both Objective-C and Swift demo applications that demonstrate the API calls you can use to interact with the Xavier Library. The Xavier SDK is an iOS SDK that enables the developers to integrate the ability to scan International Civil Aviation Organization (ICAO) compliant two-line passport traveldocuments and three-line ID cards. Some sample documents that Xavier SDK can process are:
 <br>
 
 * Passport  
@@ -19,7 +19,7 @@ The Xavier SDK contains a demo application that demonstrates the API calls you c
 The Xavier SDK is capable of scanning the travel document via the native camera to extract all the Machine Readable Zone (MRZ) fields from the travel documents. Xavier SDK performs auto capture when the quality threshold is reached or timeout occurred. The resulting  data are returned as key-value pair elements.  
 
 
-To integrate the Xavier SDK into your project, you need the <b>Xavier.framework</b> into your Xcode project. 
+To integrate the Xavier SDK into your project, you need to include the <b>Xavier.framework</b> and <b>tessdata</b> training folder in your Xcode project. 
 
 The provided demo project was created using <b>Xcode 7.1.1</b> IDE. Please download the XavierTestApplication and follow the instructions below on setting up and running the Xavier SDK demo application in Xcode IDE. The project is configured to compile at iOS 9.  
 

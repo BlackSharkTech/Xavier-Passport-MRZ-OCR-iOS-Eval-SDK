@@ -52,7 +52,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Build Options Setting](./readme_images/build_options_setting.jpg)   
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Xavier Framework highlighted in red (Figure 4)**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Xavier Framework & tessdata folder highlighted in red (Figure 4)**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Xavier Framework](./readme_images/dependency_framework.jpg)   
 <br>

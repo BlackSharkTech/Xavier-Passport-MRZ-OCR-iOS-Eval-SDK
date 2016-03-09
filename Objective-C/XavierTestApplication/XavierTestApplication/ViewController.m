@@ -29,6 +29,17 @@ SCIXavierViewController *_xavierViewController;
     
 }
 
+-(void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    
+    if (orientation == UIInterfaceOrientationPortrait) {
+        [self.startBtn setTitle:@"Portrait Capture" forState:UIControlStateNormal];
+    } else {
+        [self.startBtn setTitle:@"Landscape Capture" forState:UIControlStateNormal];
+    }
+}
+
 
 /**
  * startBtnClick
@@ -36,7 +47,15 @@ SCIXavierViewController *_xavierViewController;
 - (IBAction)startBtnClick:(id)sender {
     
     [self clearTextView];
-    [self startCapture];
+    
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    
+    if (orientation == UIInterfaceOrientationPortrait) {
+        [self startCapture];
+    } else {
+        [self startCaptureLandscape];
+    }
+    
 }
 
 
@@ -46,8 +65,23 @@ SCIXavierViewController *_xavierViewController;
 - (void) startCapture
 {
     // NOTE: Need to contact SimonComputing Inc. (www.SimonComputing.com) for the License Key
-    _xavierViewController = [[SCIXavierViewController alloc]  initWithLicenseKey: @"test@hotmail.com"
-                                                                   andLicenseKey: @"E12345678"];
+    _xavierViewController = [[SCIXavierViewController alloc] init:true andLicenseEmail:@"test@hotmail.com" andLicenseKey:@"E12345678"];
+    
+    _xavierViewController._clientProtocol = self;
+    
+    [self presentViewController:_xavierViewController animated:NO completion:^{
+        NSLog(@"Xavier View Controller is started");
+    }];
+    
+}
+
+/**
+ * startCapture in Landscape mode
+ */
+- (void) startCaptureLandscape
+{
+    // NOTE: Need to contact SimonComputing Inc. (www.SimonComputing.com) for the License Key
+    _xavierViewController = [[SCIXavierViewController alloc] init:false andLicenseEmail:@"test@hotmail.com" andLicenseKey:@"E12345678"];
     _xavierViewController._clientProtocol = self;
     
     [self presentViewController:_xavierViewController animated:NO completion:^{

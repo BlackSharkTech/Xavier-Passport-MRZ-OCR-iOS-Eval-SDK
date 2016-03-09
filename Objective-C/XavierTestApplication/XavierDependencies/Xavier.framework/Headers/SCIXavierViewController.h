@@ -20,20 +20,21 @@
 -(void) onError: (NSString*) errorMessage;
 
 @optional
+-(void)setPortraitMode:(BOOL) value;
 -(void) onMetrics: (SCIMetrics*) metrics;
+-(void) onClose;
 
 @end
-
 
 
 @interface SCIXavierViewController : UIViewController <SCIMrzProcessorProtocol, SCIImageProcessorProtocol>
 
 
 /**
- initWithView
+ init
  */
--(SCIXavierViewController *) initWithLicenseKey:(NSString*) licenseEmail
-                            andLicenseKey:(NSString*) licenseKey;
+-(SCIXavierViewController *) init: (NSString*) licenseEmail andLicenseKey:(NSString*) licenseKey;
+-(SCIXavierViewController *) init:(BOOL)portraitMode andLicenseEmail:(NSString*)licenseEmail andLicenseKey:(NSString*) licenseKey;
 
 
 /**

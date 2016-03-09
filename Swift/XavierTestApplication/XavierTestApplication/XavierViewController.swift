@@ -11,11 +11,18 @@ import Foundation
 class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLParserDelegate, UIScrollViewDelegate {
     private var xavierVC:SCIXavierViewController?
     
+    @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var resultTextView: UITextView!
     
     @IBAction func start(sender: AnyObject) {
         self.clearTextView()
-        self.startXavier()
+        let app = UIApplication.sharedApplication()
+        
+        if (app.statusBarOrientation.isPortrait) {
+            self.startXavier()
+        } else {
+            self.startXavierLandscape()
+        }
     }
     
     override func viewDidLoad() {
@@ -77,7 +84,13 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
     }
     
     func startXavier() -> Void {
-        xavierVC = SCIXavierViewController(licenseKey: "test@hotmail.com", andLicenseKey: "E12345678")
+        xavierVC = SCIXavierViewController(true, andLicenseEmail: "test@hotmail.com", andLicenseKey: "E12345678")
+        xavierVC?._clientProtocol = self
+        self.presentViewController(xavierVC!, animated: false, completion: {() -> Void in print("Xavier is started")})
+    }
+    
+    func startXavierLandscape() -> Void {
+        xavierVC = SCIXavierViewController(false, andLicenseEmail: "test@hotmail.com", andLicenseKey: "E12345678")
         xavierVC?._clientProtocol = self
         self.presentViewController(xavierVC!, animated: false, completion: {() -> Void in print("Xavier is started")})
     }
@@ -98,6 +111,16 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
     
     private func clearTextView() -> Void {
         resultTextView.text = ""
+    }
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        let app = UIApplication.sharedApplication()
+        
+        if (app.statusBarOrientation.isPortrait) {
+            startBtn.setTitle("Portrait Capture", forState: UIControlState.Normal)
+        } else {
+            startBtn.setTitle("Landscape Capture", forState: UIControlState.Normal)
+        }
     }
     
 }

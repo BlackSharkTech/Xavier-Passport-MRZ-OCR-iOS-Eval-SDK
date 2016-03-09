@@ -19,7 +19,7 @@
 
 
 @interface SCIMrzProcessor : NSObject
-
+- (SCIMrzProcessor *) init;
 -(void) start;
 -(void) processMrzTextBlob: (NSString*) mrzBlob;
 -(void) stop;

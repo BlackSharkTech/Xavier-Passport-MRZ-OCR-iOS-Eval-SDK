@@ -6,7 +6,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @protocol SCIXavierWidgetProtocol <NSObject>
 
 @required
@@ -21,7 +20,9 @@ typedef void (^WidgetCompleted)(void);
 
 @interface SCIXavierWidgetView : UIView <SCIXavierWidgetProtocol>
 
-- (id)initWithFrame:(CGRect)frame withWidgetCompletedBlock:(WidgetCompleted)widgetComplete;
+- (id)init: (UIView*) previewBoxView
+        andParentFrameRect:(CGRect)frameRect
+        withWidgetCompletedBlock:(WidgetCompleted) widgetCompleteCallback;
 
 @property (nonatomic, weak) id <SCIXavierWidgetProtocol> _widgetProtocol;
 

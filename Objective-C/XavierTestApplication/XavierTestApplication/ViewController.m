@@ -26,18 +26,18 @@ SCIXavierViewController *_xavierViewController;
     appDelegate.viewController = self;
 
     _xavierViewController = nil;
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:NO];
     
+    [self rotateForLabel];
 }
 
 -(void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     
-    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-    
-    if (orientation == UIInterfaceOrientationPortrait) {
-        [self.startBtn setTitle:@"Portrait Capture" forState:UIControlStateNormal];
-    } else {
-        [self.startBtn setTitle:@"Landscape Capture" forState:UIControlStateNormal];
-    }
+    [self rotateForLabel];
 }
 
 
@@ -202,6 +202,17 @@ SCIXavierViewController *_xavierViewController;
 - (void) clearTextView
 {
     [self.resultTextView setText:@""];
+}
+
+- (void) rotateForLabel
+{
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    
+    if (orientation == UIInterfaceOrientationPortrait) {
+        [self.startBtn setTitle:@"Portrait Capture" forState:UIControlStateNormal];
+    } else {
+        [self.startBtn setTitle:@"Landscape Capture" forState:UIControlStateNormal];
+    }
 }
 
 

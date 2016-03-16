@@ -33,6 +33,11 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
 
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(false)
+        rotateForLabel()
+    }
+    
     @objc func onRawMrz(rawMrz: String!) -> Void {
         print("\n=====> onParsedXmlFromlMrz() - \(rawMrz)")
         self.insertToTextView("Raw MRZ:\n")
@@ -114,6 +119,10 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
     }
     
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        rotateForLabel()
+    }
+    
+    func rotateForLabel() -> Void {
         let app = UIApplication.sharedApplication()
         
         if (app.statusBarOrientation.isPortrait) {

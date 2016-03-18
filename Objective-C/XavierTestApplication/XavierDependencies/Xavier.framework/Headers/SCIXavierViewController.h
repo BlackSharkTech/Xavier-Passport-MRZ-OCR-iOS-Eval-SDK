@@ -33,8 +33,8 @@
 /**
  init
  */
--(SCIXavierViewController *) init: (NSString*) licenseEmail andLicenseKey:(NSString*) licenseKey;
--(SCIXavierViewController *) init:(BOOL)portraitMode andLicenseEmail:(NSString*)licenseEmail andLicenseKey:(NSString*) licenseKey;
+-(SCIXavierViewController *) init;
+-(SCIXavierViewController *) init:(BOOL)portraitMode;
 
 
 /**

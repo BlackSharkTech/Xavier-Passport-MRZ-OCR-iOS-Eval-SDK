@@ -65,7 +65,7 @@ SCIXavierViewController *_xavierViewController;
 - (void) startCapture
 {
     // NOTE: Need to contact SimonComputing Inc. (www.SimonComputing.com) for the License Key
-    _xavierViewController = [[SCIXavierViewController alloc] init:true andLicenseEmail:@"test@hotmail.com" andLicenseKey:@"E12345678"];
+    _xavierViewController = [[SCIXavierViewController alloc] init];
     
     _xavierViewController._clientProtocol = self;
     
@@ -81,7 +81,7 @@ SCIXavierViewController *_xavierViewController;
 - (void) startCaptureLandscape
 {
     // NOTE: Need to contact SimonComputing Inc. (www.SimonComputing.com) for the License Key
-    _xavierViewController = [[SCIXavierViewController alloc] init:false andLicenseEmail:@"test@hotmail.com" andLicenseKey:@"E12345678"];
+    _xavierViewController = [[SCIXavierViewController alloc] init:false];
     _xavierViewController._clientProtocol = self;
     
     [self presentViewController:_xavierViewController animated:NO completion:^{

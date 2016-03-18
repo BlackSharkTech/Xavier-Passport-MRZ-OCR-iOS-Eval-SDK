@@ -65,6 +65,7 @@ SCIXavierViewController *_xavierViewController;
 - (void) startCapture
 {
     // NOTE: Need to contact SimonComputing Inc. (www.SimonComputing.com) for the License Key
+    // and update the plist accordingly
     _xavierViewController = [[SCIXavierViewController alloc] init];
     
     _xavierViewController._clientProtocol = self;
@@ -81,6 +82,7 @@ SCIXavierViewController *_xavierViewController;
 - (void) startCaptureLandscape
 {
     // NOTE: Need to contact SimonComputing Inc. (www.SimonComputing.com) for the License Key
+    // and update the plist accordingly
     _xavierViewController = [[SCIXavierViewController alloc] init:false];
     _xavierViewController._clientProtocol = self;
     

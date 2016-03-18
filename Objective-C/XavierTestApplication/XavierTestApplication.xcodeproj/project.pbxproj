@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D309B2641C9CBA2800F99974 /* Xavier.plist in Resources */ = {isa = PBXBuildFile; fileRef = D309B2631C9CBA2800F99974 /* Xavier.plist */; };
 		D35780251C1A29FC00951631 /* Xavier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D35780221C1A286900951631 /* Xavier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3DD02861BFE8C6300F3B946 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD02851BFE8C6300F3B946 /* main.m */; };
 		D3DD02891BFE8C6300F3B946 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DD02881BFE8C6300F3B946 /* AppDelegate.m */; };
@@ -34,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D309B2631C9CBA2800F99974 /* Xavier.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Xavier.plist; sourceTree = "<group>"; };
 		D35780221C1A286900951631 /* Xavier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Xavier.framework; path = XavierDependencies/Xavier.framework; sourceTree = "<group>"; };
 		D3DD02811BFE8C6300F3B946 /* XavierTestApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XavierTestApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DD02851BFE8C6300F3B946 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		D3DD02781BFE8C6300F3B946 = {
 			isa = PBXGroup;
 			children = (
+				D309B2631C9CBA2800F99974 /* Xavier.plist */,
 				D35780221C1A286900951631 /* Xavier.framework */,
 				D3DD02831BFE8C6300F3B946 /* XavierTestApplication */,
 				D3DD02821BFE8C6300F3B946 /* Products */,
@@ -164,6 +167,7 @@
 			files = (
 				D3F044881C35E0AA002F1E65 /* tessdata in Resources */,
 				D3DD02971BFE8C6300F3B946 /* LaunchScreen.storyboard in Resources */,
+				D309B2641C9CBA2800F99974 /* Xavier.plist in Resources */,
 				D3DD02941BFE8C6300F3B946 /* Assets.xcassets in Resources */,
 				D3DD028F1BFE8C6300F3B946 /* Main.storyboard in Resources */,
 			);

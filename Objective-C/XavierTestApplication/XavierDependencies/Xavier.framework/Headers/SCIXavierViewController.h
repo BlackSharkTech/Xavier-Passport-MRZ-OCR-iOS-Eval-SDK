@@ -7,9 +7,9 @@
 #import <UIKit/UIKit.h>
 #import "SCIMrzProcessor.h"
 #import "SCIImageProcessor.h"
-#import "SCIMetrics.h"
-#import  "SCIXavierWidgetView.h"
 
+@class SCIMetrics;
+@class SCIMrzProcessor;
 
 @protocol SCIXavierClientProtocol <NSObject>
 

@@ -3,7 +3,7 @@
 
 ### Xavier iOS Integration Manual  
 <br>
-####For Xavier iOS SDK 1.0, December 2015   
+####For Xavier iOS SDK 1.1, March 2016   
 ####By SimonComputing Inc.  5350 Shawnee Road, Suite 200  Alexandria, VA 22312    
 <br>
 **Description**  
@@ -21,7 +21,7 @@ The Xavier SDK is capable of scanning the travel document via the native camera 
 
 To integrate the Xavier SDK into your project, you need to include the <b>Xavier.framework</b> and <b>tessdata</b> training folder in your Xcode project (Figure 4). 
 
-The provided demo project was created using <b>Xcode 7.1.1</b> IDE. Please download the XavierTestApplication and follow the instructions below on setting up and running the Xavier SDK demo application in Xcode IDE. The project is configured to compile at iOS 9.  
+The provided demo project was created using <b>Xcode 7.2.1</b> IDE. Please download the XavierTestApplication and follow the instructions below on setting up and running the Xavier SDK demo application in Xcode IDE. The project is configured to compile at iOS 9.  
 
 The Xavier Evaluation SDK has been tested on the iPhone 5 through 6S Plus.  
 
@@ -104,21 +104,66 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
     3. When an error occurred and failed to capture MRZ lines.  It returns an error message in the onError callback.   
  
  <br>
-####Xavier Library Integration Code    
-#####1. Starting up Xavier capturing screen (Please see ViewController.m for integration code usage)  
+####Xavier Library Integration Code
+#####1. Property List:
+Starting version 1.1, <b>xavier.plist</b> has been introduced as part of the Xavier SDK package. It must be added to any projects utilizing the Xavier framework. 
+<br><br>The plist contains the following fields:<br>
+i. Email Address: The email one registers with SimonComputing to generate the license key<br>
+ii. License Key: The license key obtained from SimonComputing to enable Xavier<br>
+iii. Portrait Mode: Specify whether Xavier should be used in portrait mode<br><br>
+The plist is used to simplify the Xavier View Controller initialization process
+#####2. Starting up Xavier capturing screen (Please see ViewController.m for integration code usage)  
+#####There are 2 ways to initialize the Xavier View Controller:
+a. Explicitly specify whether the view controller will be initialized in portrait or landscape mode:
+
+	<b>Objective-C:</b>
 <pre><code>
-    // NOTE: Need to contact SimonComputing Inc. (www.SimonComputing.com) for the License Key
-    _xavierViewController = [[SCIXavierViewController alloc]  initWithLicenseKey: @"test@hotmail.com"
-                                                                   andLicenseKey: @"E1234567890"];
-    _xavierViewController._clientProtocol = self;
-    
+    // NOTE: To request License Key, contact SimonComputing Inc. (www.SimonComputing.com)
+    //Portrait mode
+    _xavierViewController = [[SCIXavierViewController alloc] init:true];
+    /* OR */
+    //Landscape mode
+    _xavierViewController = [[SCIXavierViewController alloc] init:false];
+    _xavierViewController._clientProtocol = self;    
     [self presentViewController:_xavierViewController animated:NO completion:^{
         NSLog(@"Xavier View Controller is started");
-    }];   
-</code></pre>    
-
-#####2. The Xavier client callbacks   
-
+    }];
+ </code></pre>  
+ 
+ 	<b>Swift:</b>
+ <pre><code>
+    // NOTE: To request License Key, contact SimonComputing Inc. (www.SimonComputing.com)
+    //Portrait mode 
+    xavierVC = SCIXavierViewController(true)
+    /* OR */
+    //Landscape mode 
+    xavierVC = SCIXavierViewController(false)
+    xavierVC?._clientProtocol = self
+    self.presentViewController(xavierVC!, animated: false, completion: {() -> Void in print("Xavier is started")})
+ </code></pre>
+ 
+ b. Leave out the orientation info and let the constructor pull that from xavier.plist:
+ 
+	<b>Objective-C:</b>
+<pre><code>
+    // NOTE: To request License Key, contact SimonComputing Inc. (www.SimonComputing.com) 
+    _xavierViewController = [[SCIXavierViewController alloc] init];
+    _xavierViewController._clientProtocol = self;    
+    [self presentViewController:_xavierViewController animated:NO completion:^{
+        NSLog(@"Xavier View Controller is started");
+    }];
+ </code></pre>  
+ 
+ 	<b>Swift:</b>
+ <pre><code>
+    // NOTE: To request License Key, contact SimonComputing Inc. (www.SimonComputing.com)
+    xavierVC = SCIXavierViewController()
+    xavierVC?._clientProtocol = self
+    self.presentViewController(xavierVC!, animated: false, completion: {() -> Void in print("Xavier is started")})
+ </code></pre>
+<br><b>Note</b>: If the approach in (a) is used to initialize the Xavier view controller then it will always overrride the value specified in the plist
+#####3. The Xavier client callbacks
+<b>Objective-C:</b>  
 <pre><code> 
 /**
  * onRawMrz - SCIXavierClientProtocol implementation
@@ -126,32 +171,28 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 -(void) <b>onRawMrz</b>: (NSString*) rawMrz
 {
     // Raw MRZ lines
-}
-
+}<br>
 /**
  * onMrzCaptureCompleted - SCIXavierClientProtocol implementation
  */
 -(void) <b>onMrzCaptureCompleted</b>
 {
     // MRZ capture complete event
-}
-
+}<br>
 /**
  * onError - SCIXavierClientProtocol implementation
  */
 -(void) <b>onError</b>: (NSString*) errorMessage
 {
 	// MRZ capturing encountered errors
-}
-
+}<br>
 /**
  * onParsedXmlFromlMrz - SCIXavierClientProtocol implementation
  */
 -(void) <b>onParsedXmlFromlMrz</b>: (NSString*) parsedXmFromlMrz
 {
-	// Parsed MRZ in XML fromat
-}
-
+	// Parsed MRZ in XML format
+}<br>
 /**
  * onMetrics - SCIXavierClientProtocol implementation
  */
@@ -159,7 +200,25 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 {
 	// Captured Metrics data for analysis purpose    
 }
-</code></pre>  
+</code></pre>
+**Swift:**
+<pre><code>
+@objc func **onRawMrz**(rawMrz: String!) -> Void {
+	//Raw MRZ lines
+}<br/>
+@objc func **onParsedXmlFromlMrz**(parsedXmFromlMrz: String!) -> Void {
+//MRZ capture complete event 
+}<br/>
+@objc func onMetrics(metrics: SCIMetrics!) -> Void {
+// Captured Metrics data for analysis purpose
+}<br/>
+@objc func **onMrzCaptureCompleted**() -> Void {
+// Parsed MRZ in XML format
+}<br>
+@objc func **onError**(errorMessage: String!) -> Void {
+// MRZ capturing encountered errors
+}
+</code></pre>
 
 ####Sample MRZ result data   
 The onRawMrz callback receives the raw MRZ lines.   The onParsedXmlFromlMrz callback receives the parsed MRZ elements in XML format. The onMetrics callbacks receives the collected metrics data.

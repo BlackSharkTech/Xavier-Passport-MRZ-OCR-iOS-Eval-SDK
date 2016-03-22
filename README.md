@@ -8,7 +8,7 @@
 <br>
 **Description**  
 
-The Xavier SDK contains both Objective-C and Swift demo applications that demonstrate the API calls you can use to interact with the Xavier Library. The Xavier SDK is an iOS SDK that enables the developers to integrate the ability to scan International Civil Aviation Organization (ICAO) compliant two-line passport traveldocuments and three-line ID cards. Some sample documents that Xavier SDK can process are:
+The Xavier SDK contains both Objective-C and Swift demo applications that demonstrate the API calls you can use to interact with the Xavier Library. The Xavier SDK is an iOS framework that enables the developers to integrate the ability to scan International Civil Aviation Organization (ICAO) compliant two-line passport and three-line ID travel documents. Some sample documents that Xavier SDK can process are:
 <br>
 
 * Passport  
@@ -63,6 +63,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 3. Run Xavier Evaluation application from Xcode IDE.  
 4. Once Xavier Evaluation application is running on the iPhone. You should see the following screen:  
 5. Click &quot;Start&quot; button to initiate the MRZ capturing process. The capturing screen should display as below:    
+6. Xavier is now capable of running in portrait orientation (Figure 11). Refer to the integration section for more details on how to utilzie this mode.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Xavier Evaluation SDK Application  (Figure 5)**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Main Screen](./readme_images/main_screen.jpg)   
@@ -93,6 +94,10 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Three-line MRZ Final Result (Figure 10)**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![three-line MRZ](./readme_images/three_line_final_result.jpg)   
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Xavier in portrait orientation (Figure 11)**  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![three-line MRZ](./readme_images/vertical.jpg)   
 
 <br>
 

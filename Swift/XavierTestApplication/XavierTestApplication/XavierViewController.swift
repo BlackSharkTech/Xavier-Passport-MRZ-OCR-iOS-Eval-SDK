@@ -89,13 +89,13 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
     }
     
     func startXavier() -> Void {
-        xavierVC = SCIXavierViewController(true, andLicenseEmail: "test@hotmail.com", andLicenseKey: "E12345678")
+        xavierVC = SCIXavierViewController(true)
         xavierVC?._clientProtocol = self
         self.presentViewController(xavierVC!, animated: false, completion: {() -> Void in print("Xavier is started")})
     }
     
     func startXavierLandscape() -> Void {
-        xavierVC = SCIXavierViewController(false, andLicenseEmail: "test@hotmail.com", andLicenseKey: "E12345678")
+        xavierVC = SCIXavierViewController(false)
         xavierVC?._clientProtocol = self
         self.presentViewController(xavierVC!, animated: false, completion: {() -> Void in print("Xavier is started")})
     }

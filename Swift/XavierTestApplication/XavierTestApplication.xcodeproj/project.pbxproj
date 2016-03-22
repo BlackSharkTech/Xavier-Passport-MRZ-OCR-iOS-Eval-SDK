@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F4628C11C18F754004AFDEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4628C01C18F754004AFDEA /* AppDelegate.swift */; };
 		1F4628C31C18F778004AFDEA /* XavierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4628C21C18F778004AFDEA /* XavierViewController.swift */; };
+		1F4B4CE11CA1E802005FEEAB /* Xavier.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B4CE01CA1E802005FEEAB /* Xavier.plist */; };
 		D322F32C1C470E0B00BE171D /* Xavier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D322F32B1C470E0B00BE171D /* Xavier.framework */; };
 		D322F32D1C470E0B00BE171D /* Xavier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D322F32B1C470E0B00BE171D /* Xavier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3DD028F1BFE8C6300F3B946 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DD028D1BFE8C6300F3B946 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		1F4628BF1C18F754004AFDEA /* XavierTestApplication-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XavierTestApplication-Bridging-Header.h"; sourceTree = "<group>"; };
 		1F4628C01C18F754004AFDEA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F4628C21C18F778004AFDEA /* XavierViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XavierViewController.swift; sourceTree = "<group>"; };
+		1F4B4CE01CA1E802005FEEAB /* Xavier.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Xavier.plist; sourceTree = "<group>"; };
 		D322F32B1C470E0B00BE171D /* Xavier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Xavier.framework; path = XavierDependencies/Xavier.framework; sourceTree = "<group>"; };
 		D3DD02811BFE8C6300F3B946 /* XavierTestApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XavierTestApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DD028E1BFE8C6300F3B946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		D3DD02781BFE8C6300F3B946 = {
 			isa = PBXGroup;
 			children = (
+				1F4B4CE01CA1E802005FEEAB /* Xavier.plist */,
 				D322F32B1C470E0B00BE171D /* Xavier.framework */,
 				D3DD02A91BFE949600F3B946 /* tessdata */,
 				D3DD029E1BFE8EAE00F3B946 /* libstdc++.6.tbd */,
@@ -164,6 +167,7 @@
 			files = (
 				D3DD02971BFE8C6300F3B946 /* LaunchScreen.storyboard in Resources */,
 				D3DD02AA1BFE949600F3B946 /* tessdata in Resources */,
+				1F4B4CE11CA1E802005FEEAB /* Xavier.plist in Resources */,
 				D3DD02941BFE8C6300F3B946 /* Assets.xcassets in Resources */,
 				D3DD028F1BFE8C6300F3B946 /* Main.storyboard in Resources */,
 			);

@@ -2,10 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>target capture</key>
+	<string>[mrz] or [gun serial]</string>
+	<key>company logo image</key>
+	<string>company_logo.png</string>
+	<key>company logo height</key>
+	<integer>0</integer>
+	<key>company logo width</key>
+	<integer>0</integer>
 	<key>previewing UIColor</key>
-	<string>blueColor</string>
+	<string>blueColor or any other [UIColor]</string>
 	<key>mrz detected UIColor</key>
-	<string>greenColor</string>
+	<string>greenColor or any other [UIColor]</string>
 	<key>close button text</key>
 	<string>Close</string>
 	<key>email address</key>

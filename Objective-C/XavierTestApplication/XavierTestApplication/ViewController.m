@@ -92,6 +92,13 @@ SCIXavierViewController *_xavierViewController;
     
 }
 
+/**
+ * onClose
+ */
+-(void) onClose
+{
+     NSLog(@"\n=====> onClose()");
+}
 
 /**
  * onRawMrz - SCIXavierClientProtocol implementation

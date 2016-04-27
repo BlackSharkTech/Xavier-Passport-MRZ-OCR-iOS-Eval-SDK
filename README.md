@@ -115,7 +115,10 @@ Starting version 1.1, <b>xavier.plist</b> has been introduced as part of the Xav
 <br><br>The plist contains the following fields:<br>
 i. Email Address: The email one registers with SimonComputing to generate the license key<br>
 ii. License Key: The license key obtained from SimonComputing to enable Xavier<br>
-iii. Portrait Mode: Specify whether Xavier should be used in portrait mode<br><br>
+iii. Portrait Mode: Specify whether Xavier should be used in portrait mode<br>
+iv. previewing UIColor: Specify the color of the preview box for the Xaveir widget. The value has to be of type UIColor<br>
+v. mrz detected UIColor: Specify the color of the preview box when the target MRZ is detected. The value has to be of type UIColor<br>
+vi. close button text: Specify the display text of the close button on the Xavier widget<br><br>
 The plist is used to simplify the Xavier View Controller initialization process
 #####2. Starting up Xavier capturing screen (Please see ViewController.m for integration code usage)  
 #####There are 2 ways to initialize the Xavier View Controller:

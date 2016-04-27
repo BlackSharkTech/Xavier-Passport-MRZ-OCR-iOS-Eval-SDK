@@ -120,8 +120,8 @@ iv. previewing UIColor: Specify the color of the preview box for the Xaveir widg
 v. mrz detected UIColor: Specify the color of the preview box when the target MRZ is detected. The value has to be of type UIColor<br>
 vi. close button text: Specify the display text of the close button on the Xavier widget<br>
 vii. company logo image: Specify the image to be used for the company logo. This is displayed on the top left corner (landscape mode) and top right corner (portrait mode) of the Xavier widget<br>
-viii. company logo width: Specify the width of the logo from (viii)<br>
-ix. company logo height: Specify the height of the logo from (viii)<br><br>
+viii. company logo width: Specify the width of the logo from (vii)<br>
+ix. company logo height: Specify the height of the logo from (vii)<br><br>
 The plist is used to simplify the Xavier View Controller initialization process
 #####2. Starting up Xavier capturing screen (Please see ViewController.m for integration code usage)  
 #####There are 2 ways to initialize the Xavier View Controller:

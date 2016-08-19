@@ -3,7 +3,7 @@
 
 ### Xavier iOS Integration Manual  
 <br>
-####For Xavier iOS SDK 1.1, March 2016   
+####For Xavier iOS SDK 1.1, September 2016   
 ####By SimonComputing Inc.  5350 Shawnee Road, Suite 200  Alexandria, VA 22312    
 <br>
 **Description**  

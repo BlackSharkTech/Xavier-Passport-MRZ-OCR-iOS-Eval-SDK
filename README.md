@@ -242,13 +242,19 @@ When an error occurrs, the onError callback will be called.
 ####Additional Information  
 Please feel free to contact us at xavier@simoncomputing.com for any questions.
 
-#####Release Notes 
+#####Release Notes
+<br>
+1.1.0
+<br>
+* Added portrait capture mode
+* Added support for Apple Tablets.
+* Updated to Tesseract 3.03
+* Added configuration through Plist
+<br>
 1.0.0    
 Initial release of Xavier Evaluation SDK  
 <br>
-<br>
-<br>
-© 2015 SimonComputing Inc. All Rights Reserved.
+© 2016 SimonComputing Inc. All Rights Reserved.
 
 
 

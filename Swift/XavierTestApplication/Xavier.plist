@@ -2,6 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Torch light on</key>
+	<dict>
+		<key>Serial</key>
+		<true/>
+		<key>Mrz</key>
+		<false/>
+	</dict>
+	<key>target capture</key>
+	<string>gun serial</string>
+	<key>company logo image</key>
+	<string>company_logo.png</string>
+	<key>company logo height</key>
+	<integer>0</integer>
+	<key>company logo width</key>
+	<integer>0</integer>
 	<key>previewing UIColor</key>
 	<string>blueColor</string>
 	<key>mrz detected UIColor</key>
@@ -9,9 +24,9 @@
 	<key>close button text</key>
 	<string>Close</string>
 	<key>email address</key>
-	<string>test@hotmail.com</string>
+	<string>xavier@simoncomputing.com</string>
 	<key>license key</key>
-	<string>E12345678</string>
+	<string>P239795412</string>
 	<key>portrait mode</key>
 	<true/>
 </dict>

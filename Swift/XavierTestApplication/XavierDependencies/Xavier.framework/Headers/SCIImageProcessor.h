@@ -13,6 +13,8 @@
 -(void) onParsedMrzTextBlob: (NSString*) parsedMrzTextBlob;
 -(void) onStartImageOcr;
 -(void) onUnrecognizedMRZBlob;
+-(void) onCapturedImage: (UIImage*) image;
+
 @optional
 
 @end

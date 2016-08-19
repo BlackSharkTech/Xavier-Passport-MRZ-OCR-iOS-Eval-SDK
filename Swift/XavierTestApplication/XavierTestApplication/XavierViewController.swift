@@ -10,9 +10,12 @@ import Foundation
 
 class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLParserDelegate, UIScrollViewDelegate {
     private var xavierVC:SCIXavierViewController?
+    private var isGun:Bool?
+    private var reImage:UIImage?
     
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var resultTextView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func start(sender: AnyObject) {
         self.clearTextView()
@@ -30,17 +33,43 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.viewController = self
+        
+        var format = NSPropertyListFormat.XMLFormat_v1_0 //format of the property list
+        var plistData:[String:AnyObject] = [:]  //our data
+        let plistPath:String? = NSBundle.mainBundle().pathForResource("Xavier", ofType: "plist")! //the path of the data
+        let plistXML = NSFileManager.defaultManager().contentsAtPath(plistPath!)! //the data in XML format
+        do{ //convert the data to a dictionary and handle errors.
+            plistData = try NSPropertyListSerialization.propertyListWithData(plistXML,options: .MutableContainersAndLeaves,format: &format)as! [String:AnyObject]
+            
+            let target = plistData["target capture"] as! String
+            
+            if(target == "gun serial") {
+                isGun = true
+            } else {
+                isGun = false
+            }
+        }
+        catch{ // error condition
+            print("Error reading plist: \(error), format: \(format)")
+        }
 
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(false)
+        
         rotateForLabel()
     }
     
     @objc func onRawMrz(rawMrz: String!) -> Void {
-        print("\n=====> onParsedXmlFromlMrz() - \(rawMrz)")
-        self.insertToTextView("Raw MRZ:\n")
+        if(isGun == false) {
+            print("\n=====> onRawMrz() - \(rawMrz)")
+            self.insertToTextView("Raw MRZ:\n")
+        } else {
+            print("\n=====>  onRawSerial- \(rawMrz)")
+            self.insertToTextView("Raw Serial No:\n")
+        }
+        
         self.insertToTextView("========\n")
         
         self.insertToTextView(rawMrz)
@@ -48,44 +77,64 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
     }
     
     @objc func onParsedXmlFromlMrz(parsedXmFromlMrz: String!) -> Void {
-        print("\n=====> onParsedXmlFromlMrz() - \(parsedXmFromlMrz)")
-        
-        self.insertToTextView("XML from MRZ:\n")
-        self.insertToTextView("===========\n")
-        self.insertToTextView(parsedXmFromlMrz)
-        self.insertToTextView("\n")
+//        if(isGun == false) {
+//            print("\n=====> onParsedXmlFromlMrz() - \(parsedXmFromlMrz)")
+//            
+//            self.insertToTextView("XML from MRZ:\n")
+//            self.insertToTextView("===========\n")
+//            self.insertToTextView(parsedXmFromlMrz)
+//        } else {
+//            print("\n=====> onParsedFromSerial() - \(parsedXmFromlMrz)")
+//            
+//            self.insertToTextView("\n")
+//        }
+//
+//        self.insertToTextView("\n")
     }
     
     @objc func onMetrics(metrics: SCIMetrics!) -> Void{
         print("\n=====> onMetrics()")
-        self.insertToTextView("Metrics:\n")
-        self.insertToTextView("======\n")
-
-        self.insertToTextView("Total OCR time: \(metrics.endOfWidget - metrics.startOfWidget)")
-
-        self.insertToTextView(" (secs)\n")
-        
-        self.insertToTextView("Number of MRZ candidates found: \(metrics.numberOfCandidates)")
-        self.insertToTextView("\n")
-        
-        self.insertToTextView("Number of scans: \(metrics.numberOfCandidates)")
-        self.insertToTextView("\n")
-        
-        self.insertToTextView("Image analysis average duration: \(metrics.imageAnalysis)")
-        self.insertToTextView(" (secs)\n")
-        self.insertToTextView("\n")
+//        self.insertToTextView("Metrics:\n")
+//        self.insertToTextView("======\n")
+//
+//        self.insertToTextView("Total OCR time: \(metrics.endOfWidget - metrics.startOfWidget)")
+//
+//        self.insertToTextView(" (secs)\n")
+//        
+//        self.insertToTextView("Number of MRZ candidates found: \(metrics.numberOfCandidates)")
+//        self.insertToTextView("\n")
+//        
+//        self.insertToTextView("Number of scans: \(metrics.numberOfCandidates)")
+//        self.insertToTextView("\n")
+//        
+//        self.insertToTextView("Image analysis average duration: \(metrics.imageAnalysis)")
+//        self.insertToTextView(" (secs)\n")
+//        self.insertToTextView("\n")
     }
     
     @objc func onMrzCaptureCompleted() {
-        print("\n=====> onMrzCaptureCompleted()")
+        print("\n=====> onCaptureCompleted()")
     }
     
     @objc func onError(errorMessage: String!) {
         print("\n=====> onError() - \(errorMessage)")
-        self.insertToTextView("Error:\n")
-        self.insertToTextView("======\n")
-        
-        self.insertToTextView(errorMessage)
+//        self.insertToTextView("Error:\n")
+//        self.insertToTextView("======\n")
+//        
+//        self.insertToTextView(errorMessage)
+    }
+    
+    @objc func onClose() {
+        print("\n=====> onClose()")
+    }
+    
+    @objc func onCapturedImage(image: UIImage!) {
+        print("\n======> onCapturedImage")
+        dispatch_async(dispatch_get_main_queue(), {
+            
+            self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
+            self.imageView.image = image
+        })
     }
     
     func startXavier() -> Void {
@@ -103,6 +152,10 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
     private func insertToTextView(insertingString:NSString!) -> Void {
         dispatch_async(dispatch_get_main_queue(), {
             var range:NSRange? = self.resultTextView!.selectedRange
+            
+            self.resultTextView.textAlignment = .Center
+            self.resultTextView.font = UIFont(name: (self.resultTextView?.font?.fontName)!, size: 24)
+            
             var currentString = self.resultTextView!.text as NSString
             currentString = currentString.substringToIndex((range?.location)!)
             

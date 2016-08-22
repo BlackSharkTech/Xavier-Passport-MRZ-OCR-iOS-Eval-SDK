@@ -5,11 +5,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SCIMrzProcessor.h"
 #import "SCIImageProcessor.h"
+#import "SCIProcessor.h"
 
 @class SCIMetrics;
 @class SCIMrzProcessor;
+@class SCIGunSerialProcessor;
 
 @protocol SCIXavierClientProtocol <NSObject>
 
@@ -18,6 +19,7 @@
 -(void) onParsedXmlFromlMrz: (NSString*) parsedXmFromlMrz;
 -(void) onMrzCaptureCompleted;
 -(void) onError: (NSString*) errorMessage;
+-(void) onCapturedImage: (UIImage*) image;
 
 @optional
 -(void)setPortraitMode:(BOOL) value;
@@ -27,7 +29,7 @@
 @end
 
 
-@interface SCIXavierViewController : UIViewController <SCIMrzProcessorProtocol, SCIImageProcessorProtocol>
+@interface SCIXavierViewController : UIViewController <SCIProcessorProtocol, SCIImageProcessorProtocol>
 
 
 /**

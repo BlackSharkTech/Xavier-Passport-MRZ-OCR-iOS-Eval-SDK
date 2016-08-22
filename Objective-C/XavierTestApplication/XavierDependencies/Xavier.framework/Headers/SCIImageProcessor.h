@@ -10,9 +10,10 @@
 @protocol SCIImageProcessorProtocol <NSObject>
 
 @required
--(void) onParsedMrzTextBlob: (NSString*) parsedMrzTextBlob;
+-(void) onParsedMrzTextBlob: (NSString*) parsedMrzTextBlob cleanedImage:(UIImage*) image;
 -(void) onStartImageOcr;
 -(void) onUnrecognizedMRZBlob;
+
 @optional
 
 @end

@@ -23,7 +23,7 @@ To integrate the Xavier SDK into your project, you need to include the <b>Xavier
 
 The provided demo project was created using <b>Xcode 7.2.1</b> IDE. Please download the XavierTestApplication and follow the instructions below on setting up and running the Xavier SDK demo application in Xcode IDE. The project is configured to compile at iOS 9.  
 
-The Xavier Evaluation SDK has been tested on the iPhone 5 through 6S Plus.  
+The Xavier Evaluation SDK has been tested on the iPhone 5 through 6S Plus and iPad Air and iPad Air 2.  
 
 The Xavier Evaluation SDK will require a key and the email address registered to that key to operate.  You may go to the below link below to request for your key:  
 

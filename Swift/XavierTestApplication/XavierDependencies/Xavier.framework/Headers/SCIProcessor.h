@@ -15,7 +15,6 @@
 -(void) onCapturedMrz: (NSString*) capturedMrz;
 -(void) onCapturedImage: (UIImage*) image;
 -(void) onUnrecognizedMrzLines;
-
 @end
 
 
@@ -32,7 +31,7 @@
 @interface SCIGunSerialProcessor : NSObject
 - (SCIGunSerialProcessor *) init;
 -(void) start;
--(void) processMrzTextBlob: (NSString*) mrzBlob;
+-(void) processMrzTextBlob: (NSMutableDictionary*) blobImagePair;
 -(void) stop;
 
 @property (nonatomic, weak) id <SCIProcessorProtocol> _gunSerialProcessorProtocol;

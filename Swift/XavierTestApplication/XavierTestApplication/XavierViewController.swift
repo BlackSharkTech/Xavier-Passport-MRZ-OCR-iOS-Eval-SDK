@@ -77,39 +77,39 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
     }
     
     @objc func onParsedXmlFromlMrz(parsedXmFromlMrz: String!) -> Void {
-//        if(isGun == false) {
-//            print("\n=====> onParsedXmlFromlMrz() - \(parsedXmFromlMrz)")
-//            
-//            self.insertToTextView("XML from MRZ:\n")
-//            self.insertToTextView("===========\n")
-//            self.insertToTextView(parsedXmFromlMrz)
-//        } else {
-//            print("\n=====> onParsedFromSerial() - \(parsedXmFromlMrz)")
-//            
-//            self.insertToTextView("\n")
-//        }
-//
-//        self.insertToTextView("\n")
+        if(isGun == false) {
+            print("\n=====> onParsedXmlFromlMrz() - \(parsedXmFromlMrz)")
+            
+            self.insertToTextView("XML from MRZ:\n")
+            self.insertToTextView("===========\n")
+            self.insertToTextView(parsedXmFromlMrz)
+        } else {
+            print("\n=====> onParsedFromSerial() - \(parsedXmFromlMrz)")
+            
+            self.insertToTextView("\n")
+        }
+
+        self.insertToTextView("\n")
     }
     
     @objc func onMetrics(metrics: SCIMetrics!) -> Void{
         print("\n=====> onMetrics()")
-//        self.insertToTextView("Metrics:\n")
-//        self.insertToTextView("======\n")
-//
-//        self.insertToTextView("Total OCR time: \(metrics.endOfWidget - metrics.startOfWidget)")
-//
-//        self.insertToTextView(" (secs)\n")
-//        
-//        self.insertToTextView("Number of MRZ candidates found: \(metrics.numberOfCandidates)")
-//        self.insertToTextView("\n")
-//        
-//        self.insertToTextView("Number of scans: \(metrics.numberOfCandidates)")
-//        self.insertToTextView("\n")
-//        
-//        self.insertToTextView("Image analysis average duration: \(metrics.imageAnalysis)")
-//        self.insertToTextView(" (secs)\n")
-//        self.insertToTextView("\n")
+        self.insertToTextView("Metrics:\n")
+        self.insertToTextView("======\n")
+
+        self.insertToTextView("Total OCR time: \(metrics.endOfWidget - metrics.startOfWidget)")
+
+        self.insertToTextView(" (secs)\n")
+        
+        self.insertToTextView("Number of MRZ candidates found: \(metrics.numberOfCandidates)")
+        self.insertToTextView("\n")
+        
+        self.insertToTextView("Number of scans: \(metrics.numberOfCandidates)")
+        self.insertToTextView("\n")
+        
+        self.insertToTextView("Image analysis average duration: \(metrics.imageAnalysis)")
+        self.insertToTextView(" (secs)\n")
+        self.insertToTextView("\n")
     }
     
     @objc func onMrzCaptureCompleted() {
@@ -118,10 +118,10 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
     
     @objc func onError(errorMessage: String!) {
         print("\n=====> onError() - \(errorMessage)")
-//        self.insertToTextView("Error:\n")
-//        self.insertToTextView("======\n")
-//        
-//        self.insertToTextView(errorMessage)
+        self.insertToTextView("Error:\n")
+        self.insertToTextView("======\n")
+        
+        self.insertToTextView(errorMessage)
     }
     
     @objc func onClose() {

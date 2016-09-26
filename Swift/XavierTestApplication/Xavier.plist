@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>target capture</key>
-	<string>[mrz] or [gun serial]</string>
+	<string>mrz</string>
 	<key>company logo image</key>
 	<string>company_logo.png</string>
 	<key>company logo height</key>

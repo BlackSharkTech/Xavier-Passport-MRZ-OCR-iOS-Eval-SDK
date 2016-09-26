@@ -8,18 +8,18 @@
 import UIKit
 import Foundation
 
-class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLParserDelegate, UIScrollViewDelegate {
-    private var xavierVC:SCIXavierViewController?
-    private var isGun:Bool?
-    private var reImage:UIImage?
+class XavierViewController: UIViewController, SCIXavierClientProtocol, XMLParserDelegate, UIScrollViewDelegate {
+    fileprivate var xavierVC:SCIXavierViewController?
+    fileprivate var isGun:Bool?
+    fileprivate var reImage:UIImage?
     
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var resultTextView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBAction func start(sender: AnyObject) {
+    @IBAction func start(_ sender: AnyObject) {
         self.clearTextView()
-        let app = UIApplication.sharedApplication()
+        let app = UIApplication.shared
         
         if (app.statusBarOrientation.isPortrait) {
             self.startXavier()
@@ -31,15 +31,15 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.viewController = self
         
-        var format = NSPropertyListFormat.XMLFormat_v1_0 //format of the property list
+        var format = PropertyListSerialization.PropertyListFormat.xml //format of the property list
         var plistData:[String:AnyObject] = [:]  //our data
-        let plistPath:String? = NSBundle.mainBundle().pathForResource("Xavier", ofType: "plist")! //the path of the data
-        let plistXML = NSFileManager.defaultManager().contentsAtPath(plistPath!)! //the data in XML format
+        let plistPath:String? = Bundle.main.path(forResource: "Xavier", ofType: "plist")! //the path of the data
+        let plistXML = FileManager.default.contents(atPath: plistPath!)! //the data in XML format
         do{ //convert the data to a dictionary and handle errors.
-            plistData = try NSPropertyListSerialization.propertyListWithData(plistXML,options: .MutableContainersAndLeaves,format: &format)as! [String:AnyObject]
+            plistData = try PropertyListSerialization.propertyList(from: plistXML,options: .mutableContainersAndLeaves,format: &format)as! [String:AnyObject]
             
             let target = plistData["target capture"] as! String
             
@@ -55,13 +55,13 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
         
         rotateForLabel()
     }
     
-    @objc func onRawMrz(rawMrz: String!) -> Void {
+    @objc func onRawMrz(_ rawMrz: String!) -> Void {
         if(isGun == false) {
             print("\n=====> onRawMrz() - \(rawMrz)")
             self.insertToTextView("Raw MRZ:\n")
@@ -72,17 +72,17 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
         
         self.insertToTextView("========\n")
         
-        self.insertToTextView(rawMrz)
+        self.insertToTextView(rawMrz as NSString!)
         self.insertToTextView("\n")
     }
     
-    @objc func onParsedXmlFromlMrz(parsedXmFromlMrz: String!) -> Void {
+    @objc func onParsedXmlFromlMrz(_ parsedXmFromlMrz: String!) -> Void {
         if(isGun == false) {
             print("\n=====> onParsedXmlFromlMrz() - \(parsedXmFromlMrz)")
             
             self.insertToTextView("XML from MRZ:\n")
             self.insertToTextView("===========\n")
-            self.insertToTextView(parsedXmFromlMrz)
+            self.insertToTextView(parsedXmFromlMrz as NSString!)
         } else {
             print("\n=====> onParsedFromSerial() - \(parsedXmFromlMrz)")
             
@@ -92,22 +92,22 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
         self.insertToTextView("\n")
     }
     
-    @objc func onMetrics(metrics: SCIMetrics!) -> Void{
+    @objc func onMetrics(_ metrics: SCIMetrics!) -> Void{
         print("\n=====> onMetrics()")
         self.insertToTextView("Metrics:\n")
         self.insertToTextView("======\n")
 
-        self.insertToTextView("Total OCR time: \(metrics.endOfWidget - metrics.startOfWidget)")
+        self.insertToTextView("Total OCR time: \(metrics.endOfWidget - metrics.startOfWidget)" as NSString!)
 
         self.insertToTextView(" (secs)\n")
         
-        self.insertToTextView("Number of MRZ candidates found: \(metrics.numberOfCandidates)")
+        self.insertToTextView("Number of MRZ candidates found: \(metrics.numberOfCandidates)" as NSString!)
         self.insertToTextView("\n")
         
-        self.insertToTextView("Number of scans: \(metrics.numberOfCandidates)")
+        self.insertToTextView("Number of scans: \(metrics.numberOfCandidates)" as NSString!)
         self.insertToTextView("\n")
         
-        self.insertToTextView("Image analysis average duration: \(metrics.imageAnalysis)")
+        self.insertToTextView("Image analysis average duration: \(metrics.imageAnalysis)" as NSString!)
         self.insertToTextView(" (secs)\n")
         self.insertToTextView("\n")
     }
@@ -116,23 +116,23 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
         print("\n=====> onCaptureCompleted()")
     }
     
-    @objc func onError(errorMessage: String!) {
+    @objc func onError(_ errorMessage: String!) {
         print("\n=====> onError() - \(errorMessage)")
         self.insertToTextView("Error:\n")
         self.insertToTextView("======\n")
         
-        self.insertToTextView(errorMessage)
+        self.insertToTextView(errorMessage as NSString!)
     }
     
     @objc func onClose() {
         print("\n=====> onClose()")
     }
     
-    @objc func onCapturedImage(image: UIImage!) {
+    @objc func onCapturedImage(_ image: UIImage!) {
         print("\n======> onCapturedImage")
-        dispatch_async(dispatch_get_main_queue(), {
+        DispatchQueue.main.async(execute: {
             
-            self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
+            self.imageView.contentMode = UIViewContentMode.scaleAspectFit
             self.imageView.image = image
         })
     }
@@ -140,48 +140,48 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, NSXMLPars
     func startXavier() -> Void {
         xavierVC = SCIXavierViewController(true)
         xavierVC?._clientProtocol = self
-        self.presentViewController(xavierVC!, animated: false, completion: {() -> Void in print("Xavier is started")})
+        self.present(xavierVC!, animated: false, completion: {() -> Void in print("Xavier is started")})
     }
     
     func startXavierLandscape() -> Void {
         xavierVC = SCIXavierViewController(false)
         xavierVC?._clientProtocol = self
-        self.presentViewController(xavierVC!, animated: false, completion: {() -> Void in print("Xavier is started")})
+        self.present(xavierVC!, animated: false, completion: {() -> Void in print("Xavier is started")})
     }
     
-    private func insertToTextView(insertingString:NSString!) -> Void {
-        dispatch_async(dispatch_get_main_queue(), {
+    fileprivate func insertToTextView(_ insertingString:NSString!) -> Void {
+        DispatchQueue.main.async(execute: {
             var range:NSRange? = self.resultTextView!.selectedRange
             
-            self.resultTextView.textAlignment = .Center
-            self.resultTextView.font = UIFont(name: (self.resultTextView?.font?.fontName)!, size: 24)
+            self.resultTextView.textAlignment = .left
+            self.resultTextView.font = UIFont(name: (self.resultTextView?.font?.fontName)!, size: 12)
             
             var currentString = self.resultTextView!.text as NSString
-            currentString = currentString.substringToIndex((range?.location)!)
+            currentString = currentString.substring(to: (range?.location)!) as NSString
             
-            self.resultTextView!.scrollEnabled = true
+            self.resultTextView!.isScrollEnabled = true
             self.resultTextView!.text = (currentString as String) + (insertingString as String)
             range?.location += insertingString.length
             self.resultTextView!.selectedRange = range!
-            self.resultTextView!.scrollEnabled = true
+            self.resultTextView!.isScrollEnabled = true
         })
     }
     
-    private func clearTextView() -> Void {
+    fileprivate func clearTextView() -> Void {
         resultTextView.text = ""
     }
     
-    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
         rotateForLabel()
     }
     
     func rotateForLabel() -> Void {
-        let app = UIApplication.sharedApplication()
+        let app = UIApplication.shared
         
         if (app.statusBarOrientation.isPortrait) {
-            startBtn.setTitle("Portrait Capture", forState: UIControlState.Normal)
+            startBtn.setTitle("Portrait Capture", for: UIControlState())
         } else {
-            startBtn.setTitle("Landscape Capture", forState: UIControlState.Normal)
+            startBtn.setTitle("Landscape Capture", for: UIControlState())
         }
     }
     

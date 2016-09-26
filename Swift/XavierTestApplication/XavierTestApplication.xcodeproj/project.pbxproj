@@ -142,6 +142,7 @@
 					D3DD02801BFE8C6300F3B946 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = ZHDP7G5M37;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -321,6 +322,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "XavierTestApplication/XavierTestApplication-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
@@ -351,6 +353,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "XavierTestApplication/XavierTestApplication-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;

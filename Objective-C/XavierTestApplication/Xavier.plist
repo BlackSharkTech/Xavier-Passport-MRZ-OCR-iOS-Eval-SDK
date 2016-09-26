@@ -2,8 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Torch light on</key>
+	<dict>
+		<key>Mrz</key>
+		<false/>
+		<key>Serial</key>
+		<false/>
+	</dict>
 	<key>target capture</key>
-	<string>[mrz] or [gun serial]</string>
+	<string>mrz</string>
 	<key>company logo image</key>
 	<string>company_logo.png</string>
 	<key>company logo height</key>
@@ -17,9 +24,9 @@
 	<key>close button text</key>
 	<string>Close</string>
 	<key>email address</key>
-	<string>test@hotmail.com</string>
+	<string>d.geneiatakis@gmail.com</string>
 	<key>license key</key>
-	<string>E12345678</string>
+	<string>E117747357</string>
 	<key>portrait mode</key>
 	<true/>
 </dict>

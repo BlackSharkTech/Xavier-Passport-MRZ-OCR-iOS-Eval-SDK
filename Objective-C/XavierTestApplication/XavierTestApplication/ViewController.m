@@ -26,6 +26,8 @@ SCIXavierViewController *_xavierViewController;
     appDelegate.viewController = self;
 
     _xavierViewController = nil;
+    
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -115,6 +117,14 @@ SCIXavierViewController *_xavierViewController;
   
 }
 
+
+/**
+ * onCapturedImage - SCIXavierClientProtocol implementation
+ */
+-(void) onCapturedImage: (UIImage*) image
+{
+    // A snapshot of a captured image
+}
 
 /**
  * onMrzCaptureCompleted - SCIXavierClientProtocol implementation

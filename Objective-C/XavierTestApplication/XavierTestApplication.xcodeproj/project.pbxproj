@@ -139,7 +139,7 @@
 				TargetAttributes = {
 					D3DD02801BFE8C6300F3B946 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = ZHDP7G5M37;
+						DevelopmentTeam = Y3LG793X79;
 					};
 				};
 			};
@@ -299,7 +299,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZHDP7G5M37;
+				DEVELOPMENT_TEAM = Y3LG793X79;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -314,7 +314,7 @@
 					"$(PROJECT_DIR)/XavierDependencies",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.simoncomputing.XavierTestApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blacksharktech.XavierTestApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -327,7 +327,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZHDP7G5M37;
+				DEVELOPMENT_TEAM = Y3LG793X79;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -342,7 +342,7 @@
 					"$(PROJECT_DIR)/XavierDependencies",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.simoncomputing.XavierTestApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blacksharktech.XavierTestApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};

@@ -4,7 +4,7 @@
 ### Xavier iOS Integration Manual  
 <br>
 ####For Xavier iOS SDK 1.1, September 2016   
-####By SimonComputing Inc.  5350 Shawnee Road, Suite 200  Alexandria, VA 22312    
+####By Blackshark Tech,  6811 Spout Ln, Fairfax Station, VA 22039   
 <br>
 **Description**  
 
@@ -27,11 +27,11 @@ The Xavier Evaluation SDK has been tested on the iPhone 5 through 6S Plus and iP
 
 The Xavier Evaluation SDK will require a key and the email address registered to that key to operate.  You may go to the below link below to request for your key:  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[http://www.simoncomputing.com/main/xavier](http://www.simoncomputing.com/main/xavier)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[http://www.blacksharktech.com/](http://www.blacksharktech.com/)   
 
 You need to specify an email address to receive the generated key.  There is no obligation to purchase the Xavier SDK.  We invite you to explore and try it out for free.  
 
-The Xavier Evaluation SDK displays a random pop-up screen to indicate that this is an evaluation version. Please contact SimonComputing Inc. email address xavier@simoncomputing.com for a production license version of Xavier  
+The Xavier Evaluation SDK displays a random pop-up screen to indicate that this is an evaluation version. Please contact Blackshark Tech email address admin@blacksharktech.com for a production license version of Xavier  
 
 ####Getting the latest Xavier Evaluation SDK from GitHub  
 
@@ -113,15 +113,17 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 #####1. Property List:
 Starting version 1.1, <b>xavier.plist</b> has been introduced as part of the Xavier SDK package. It must be added to any projects utilizing the Xavier framework. 
 <br><br>The plist contains the following fields:<br>
-i. Email Address: The email one registers with SimonComputing to generate the license key<br>
-ii. License Key: The license key obtained from SimonComputing to enable Xavier<br>
+i. Email Address: The email one registers with Blackshark Tech to generate the license key<br>
+ii. License Key: The license key obtained from Blackshark Tech to enable Xavier<br>
 iii. Portrait Mode: Specify whether Xavier should be used in portrait mode<br>
 iv. previewing UIColor: Specify the color of the preview box for the Xaveir widget. The value has to be of type UIColor<br>
 v. mrz detected UIColor: Specify the color of the preview box when the target MRZ is detected. The value has to be of type UIColor<br>
 vi. close button text: Specify the display text of the close button on the Xavier widget<br>
 vii. company logo image: Specify the image to be used for the company logo. This is displayed on the top left corner (landscape mode) and top right corner (portrait mode) of the Xavier widget<br>
 viii. company logo width: Specify the width of the logo from (vii)<br>
-ix. company logo height: Specify the height of the logo from (vii)<br><br>
+ix. company logo height: Specify the height of the logo from (vii)<br>
+x. Maximum MRZ candidates: Specify the maximum number of MRZ candidates that the engine need to create the composite<br>
+xi. OCR Timeout: Specify the maximum duration that the enginge will run<br><br>
 The plist is used to simplify the Xavier View Controller initialization process
 #####2. Starting up Xavier capturing screen (Please see ViewController.m for integration code usage)  
 #####There are 2 ways to initialize the Xavier View Controller:
@@ -129,7 +131,7 @@ a. Explicitly specify whether the view controller will be initialized in portrai
 
 	<b>Objective-C:</b>
 <pre><code>
-    // NOTE: To request License Key, contact SimonComputing Inc. (www.SimonComputing.com)
+    // NOTE: To request License Key, contact Blackshark Tech (www.blacksharktech.com)
     //Portrait mode
     _xavierViewController = [[SCIXavierViewController alloc] init:true];
     /* OR */
@@ -143,7 +145,7 @@ a. Explicitly specify whether the view controller will be initialized in portrai
  
  	<b>Swift:</b>
  <pre><code>
-    // NOTE: To request License Key, contact SimonComputing Inc. (www.SimonComputing.com)
+    // NOTE: To request License Key, contact Blackshark Tech (www.blacksharktech.com)
     //Portrait mode 
     xavierVC = SCIXavierViewController(true)
     /* OR */
@@ -157,7 +159,7 @@ a. Explicitly specify whether the view controller will be initialized in portrai
  
 	<b>Objective-C:</b>
 <pre><code>
-    // NOTE: To request License Key, contact SimonComputing Inc. (www.SimonComputing.com) 
+    // NOTE: To request License Key, contact Blackshark Tech (www.blacksharktech.com) 
     _xavierViewController = [[SCIXavierViewController alloc] init];
     _xavierViewController._clientProtocol = self;    
     [self presentViewController:_xavierViewController animated:NO completion:^{
@@ -167,7 +169,7 @@ a. Explicitly specify whether the view controller will be initialized in portrai
  
  	<b>Swift:</b>
  <pre><code>
-    // NOTE: To request License Key, contact SimonComputing Inc. (www.SimonComputing.com)
+    // NOTE: To request License Key, contact Blackshark Tech (www.blacksharktech.com)
     xavierVC = SCIXavierViewController()
     xavierVC?._clientProtocol = self
     self.presentViewController(xavierVC!, animated: false, completion: {() -> Void in print("Xavier is started")})
@@ -231,6 +233,28 @@ a. Explicitly specify whether the view controller will be initialized in portrai
 }
 </code></pre>
 
+####XML Tag Description
+The “onCapturedMRZ” callback returns the validated and corrected MRZ.  Attributes are used to indicate validation states and corrected field values.
+ 
+A ParsedMRZ XML tag is created when an MRZ is parsed.  The lines of an ParsedMRZ are put into an XML tag called “ParsedLineList”.  Each line is put into a “ParsedLine” XML tag.  These are characters that are recognized by the OCR engine in a raw state.  Each line is delimited by a carriage return or line feed.
+ 
+The document type determines the schema of the MRZ.  Fields are defined by their line and position within each line of the MRZ.  Each field consists of descriptors.
+ 
+* alpha - the field only contains upper case alpha characters
+* checkDigit - the field is a number and is a check digit of a field
+* futureDate - the field is a date in the future (with the format YYMMDD)
+* mandatory - the field must not be blank (“<“)
+* numeric - the field is numeric
+* pastDate - the field is a date in the past
+* set - the field is in a set (i.e. M, F, X - male, female, other)
+ 
+Fields found in each “ParsedLine” are put into “ParsedField” tags.   The “ParsedField” tags have the following attributes:
+ 
+* name - the name of the field.  Some fields can have different names but similar function from other travel documents.
+* value - the value of the field from the MRZ
+* correctedValue - the corrected value of the field fro the MRZ
+* failedDescriptor - this attribute only appears when a descriptor fails when validating the MRZ.  If there are multiple detected failures, a list of them will be created for the attribute value.
+
 ####Sample MRZ result data   
 The onRawMrz callback receives the raw MRZ lines.   The onParsedXmlFromlMrz callback receives the parsed MRZ elements in XML format. The onMetrics callbacks receives the collected metrics data.
 
@@ -240,7 +264,7 @@ The onRawMrz callback receives the raw MRZ lines.   The onParsedXmlFromlMrz call
 When an error occurrs, the onError callback will be called.
 
 ####Additional Information  
-Please feel free to contact us at xavier@simoncomputing.com for any questions.
+Please feel free to contact us at admin@blacksharktech.com for any questions.
 
 #####Release Notes
 <br>
@@ -254,7 +278,7 @@ Please feel free to contact us at xavier@simoncomputing.com for any questions.
 1.0.0    
 Initial release of Xavier Evaluation SDK  
 <br>
-© 2016 SimonComputing Inc. All Rights Reserved.
+© 2017 Blackshark Tech All Rights Reserved.
 
 
 

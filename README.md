@@ -3,12 +3,12 @@
 
 ### Xavier iOS Integration Manual  
 <br>
-####For Xavier iOS SDK 1.1, September 2016   
+####For Xavier IOS SDK 1.1, March 2017   
 ####By Blackshark Tech,  6811 Spout Ln, Fairfax Station, VA 22039   
 <br>
 **Description**  
 
-The Xavier SDK contains both Objective-C and Swift demo applications that demonstrate the API calls you can use to interact with the Xavier Library. The Xavier SDK is an iOS framework that enables the developers to integrate the ability to scan International Civil Aviation Organization (ICAO) compliant two-line passport and three-line ID travel documents. Some sample documents that Xavier SDK can process are:
+The Xavier SDK contains both Objective-C and Swift demo applications that demonstrate the API calls you can use to interact with the Xavier Library. The Xavier SDK is an IOS framework that enables the developers to integrate the ability to scan International Civil Aviation Organization (ICAO) compliant two-line passport and three-line ID travel documents. Some sample documents that Xavier SDK can process are:
 <br>
 
 * Passport  
@@ -31,7 +31,7 @@ The Xavier Evaluation SDK will require a key and the email address registered to
 
 You need to specify an email address to receive the generated key.  There is no obligation to purchase the Xavier SDK.  We invite you to explore and try it out for free.  
 
-The Xavier Evaluation SDK displays a random pop-up screen to indicate that this is an evaluation version. Please contact Blackshark Tech email address admin@blacksharktech.com for a production license version of Xavier  
+The Xavier Evaluation SDK displays a random pop-up screen to indicate that this is an evaluation version. Please contact Blackshark Tech email address sales@blacksharktech.com for a production license version of Xavier  
 
 ####Getting the latest Xavier Evaluation SDK from GitHub  
 

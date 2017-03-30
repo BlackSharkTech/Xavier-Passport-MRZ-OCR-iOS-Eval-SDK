@@ -23,13 +23,11 @@ To integrate the Xavier SDK into your project, you need to include the <b>Xavier
 
 The provided demo project was created using <b>Xcode 7.2.1</b> IDE. Please download the XavierTestApplication and follow the instructions below on setting up and running the Xavier SDK demo application in Xcode IDE. The project is configured to compile at iOS 9.  
 
-The Xavier Evaluation SDK has been tested on the iPhone 5 through 6S Plus and iPad Air and iPad Air 2.  
+The Xavier Evaluation SDK has been tested on the iPhone 5 through 7 Plus and iPad Air and iPad Air 2.  
 
-The Xavier Evaluation SDK will require a key and the email address registered to that key to operate.  You may go to the below link below to request for your key:  
+The Xavier Evaluation SDK will require a key and the email address registered to that key to operate.  You may send an email to request for an evaluation key to sales@blackSharkTech.com.  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[http://www.blacksharktech.com/](http://www.blacksharktech.com/)   
-
-You need to specify an email address to receive the generated key.  There is no obligation to purchase the Xavier SDK.  We invite you to explore and try it out for free.  
+There is no obligation to purchase the Xavier SDK.  We invite you to explore and try it out for free.  
 
 The Xavier Evaluation SDK displays a random pop-up screen to indicate that this is an evaluation version. Please contact Blackshark Tech email address sales@blacksharktech.com for a production license version of Xavier  
 
@@ -113,7 +111,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 #####1. Property List:
 Starting version 1.1, <b>xavier.plist</b> has been introduced as part of the Xavier SDK package. It must be added to any projects utilizing the Xavier framework. 
 <br><br>The plist contains the following fields:<br>
-i. Email Address: The email one registers with Blackshark Tech to generate the license key<br>
+i. Email Address: The email sent to BlackShark Tech to generated the License Key<br>
 ii. License Key: The license key obtained from Blackshark Tech to enable Xavier<br>
 iii. Portrait Mode: Specify whether Xavier should be used in portrait mode<br>
 iv. previewing UIColor: Specify the color of the preview box for the Xaveir widget. The value has to be of type UIColor<br>

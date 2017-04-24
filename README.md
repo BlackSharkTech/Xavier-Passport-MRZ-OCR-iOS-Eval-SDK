@@ -1,14 +1,14 @@
 ![Xavier Logo](./readme_images/passport_scanning_simplified.jpg)  
 ![Xavier Logo](./readme_images/xavier_logo.jpg)  
 
-### Xavier iOS Integration Manual  
+### Xavier Mrz Sdk Integration Manual  
 <br>
 ####For Xavier iOS SDK 1.1, March 2017   
 ####By Blackshark Tech,  6811 Spout Ln, Fairfax Station, VA 22039   
 <br>
 **Description**  
 
-The Xavier SDK contains both Objective-C and Swift demo applications that demonstrate the API calls you can use to interact with the Xavier Library. The Xavier SDK is an iOS framework that enables the developers to integrate the ability to scan International Civil Aviation Organization (ICAO) compliant two-line passport and three-line ID travel documents. Some sample documents that Xavier SDK can process are:
+The Xavier Mrz SDK contains both Objective-C and Swift demo applications that demonstrate the API calls you can use to interact with the Xavier Library. The Xavier SDK is an iOS framework that enables the developers to integrate the ability to perform OCR i.e. scan on International Civil Aviation Organization (ICAO) compliant two-line passport and three-line ID travel documents. Some sample documents that Xavier SDK can process are:
 <br>
 
 * Passport  
@@ -16,10 +16,10 @@ The Xavier SDK contains both Objective-C and Swift demo applications that demons
 * Visa, Resident Alien, Commuter  
 * Re-Entry Permit  
 
-The Xavier SDK is capable of scanning the travel document via the native camera to extract all the Machine Readable Zone (MRZ) fields from the travel documents. Xavier SDK performs auto capture when the quality threshold is reached or timeout occurred. The resulting  data are returned as key-value pair elements.  
+The Xavier Mrz SDK is capable of performing OCR on travel documents via the native camera to extract all the Machine Readable Zone (MRZ) fields from the travel documents. Xavier SDK performs auto capture when the quality threshold is reached or timeout occurred. The resulting  data are returned as key-value pair elements.  
 
 
-To integrate the Xavier SDK into your project, you need to include the <b>Xavier.framework</b> and <b>tessdata</b> training folder in your Xcode project (Figure 4). 
+To integrate the Xavier Mrz SDK into your project, you need to include the <b>Xavier.framework</b> and <b>tessdata</b> training folder in your Xcode project (Figure 4). 
 
 The provided demo project was created using <b>Xcode 7.2.1</b> IDE. Please download the XavierTestApplication and follow the instructions below on setting up and running the Xavier SDK demo application in Xcode IDE. The project is configured to compile at iOS 9.  
 
@@ -27,7 +27,7 @@ The Xavier Evaluation SDK has been tested on the iPhone 5 through 7 Plus and iPa
 
 The Xavier Evaluation SDK will require a key and the email address registered to that key to operate.  You may send an email to request for an evaluation key to sales@blackSharkTech.com.  
 
-There is no obligation to purchase the Xavier SDK.  We invite you to explore and try it out for free.  
+There is no obligation to purchase the Xavier Mrz SDK.  We invite you to explore and try it out for free.  
 
 The Xavier Evaluation SDK displays a random pop-up screen to indicate that this is an evaluation version. Please contact Blackshark Tech email address sales@blacksharktech.com for a production license version of Xavier  
 

@@ -3,7 +3,7 @@
 
 ### Xavier MRZ SDK Integration Manual  
 <br>
-### For Xavier iOS SDK 1.1, March 2017   
+### For Xavier iOS SDK 1.4, July 2017   
 ### By Blackshark Tech,  6811 Spout Ln, Fairfax Station, VA 22039   
 <br>
 **Description**  
@@ -16,8 +16,9 @@ The Xavier MRZ SDK contains both Objective-C and Swift demo applications that de
 * Visa, Resident Alien, Commuter  
 * Re-Entry Permit  
 
-The Xavier MRZ SDK is capable of performing OCR on travel documents via the native camera to extract all the Machine Readable Zone (MRZ) fields from the travel documents. Xavier MRZ SDK performs auto capture when the quality threshold is reached or timeout occurred. The resulting  data are returned as key-value pair elements.  
+The Xavier MRZ SDK is capable of performing OCR on travel documents via the native camera to extract all the Machine Readable Zone (MRZ) fields from the travel documents. Xavier MRZ SDK performs auto capture when the quality threshold is reached or timeout occurred. The resulting  data are returned as key-value pair elements.
 
+As of release 1.4, the Xavier engine is also capable of scanning different types of barcodes (one dimensional, QR code etc...). This new feature works seemlessly alongside of the MRZ scanning functionality.
 
 To integrate the Xavier MRZ SDK into your project, you need to include the <b>Xavier.framework</b> and <b>tessdata</b> training folder in your Xcode project (Figure 4). 
 
@@ -210,6 +211,10 @@ a. Explicitly specify whether the view controller will be initialized in portrai
 -(void) <b>onMetrics</b>: (SCIMetrics*) metrics
 {
 	// Captured Metrics data for analysis purpose    
+}<br>
+-(void) <b>onCapturedQr</b>: (NSString*) qrValue
+{
+	// Barcode data captured
 }
 </code></pre>
 **Swift:**
@@ -228,6 +233,9 @@ a. Explicitly specify whether the view controller will be initialized in portrai
 }<br>
 @objc func **onError**(errorMessage: String!) -> Void {
 // MRZ capturing encountered errors
+}<br>
+@objc func onCapturedQr(_ qrValue: String!) {
+	// Barcode data captured
 }
 </code></pre>
 
@@ -265,6 +273,18 @@ When an error occurrs, the onError callback will be called.
 Please feel free to contact us at admin@blacksharktech.com for any questions.
 
 #####Release Notes
+<br>
+1.4
+<br>
+* Add capability to read barcode
+<br>
+1.3
+<br>
+* Add new plist properties to improve performance
+<br>
+1.2.0
+<br>
+* Minor bug fixes
 <br>
 1.1.0
 <br>

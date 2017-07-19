@@ -141,7 +141,7 @@
 				TargetAttributes = {
 					D3DD02801BFE8C6300F3B946 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = ZHDP7G5M37;
+						DevelopmentTeam = MZTE8253EZ;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -302,6 +302,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MZTE8253EZ;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_BITCODE = NO;
@@ -334,6 +335,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MZTE8253EZ;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_BITCODE = NO;

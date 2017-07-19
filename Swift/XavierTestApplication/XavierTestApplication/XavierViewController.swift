@@ -137,6 +137,11 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, XMLParser
         })
     }
     
+    @objc func onCapturedBarcode(_ barcode: String!) {
+        print("\n=====> onCaptureBarcode() - \(barcode)")
+        self.insertToTextView(barcode as NSString!)
+    }
+    
     func startXavier() -> Void {
         xavierVC = SCIXavierViewController(true)
         xavierVC?._clientProtocol = self

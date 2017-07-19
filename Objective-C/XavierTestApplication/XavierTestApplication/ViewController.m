@@ -194,6 +194,18 @@ SCIXavierViewController *_xavierViewController;
     
 }
 
+- (void) onCapturedBarcode:(NSString *)barcode
+{
+    NSLog(@"\n\n=====> onCapturedBarcode() - %@", barcode);
+    
+    [self insertToTextView :@"Barcode:\n"];
+    [self insertToTextView :@"===========\n"];
+    
+    [self insertToTextView :barcode];
+    [self insertToTextView :@"\n"];
+
+}
+
 
 
 /**

@@ -1,7 +1,7 @@
 //
 //  SCIXavierViewController.h
 //
-//  Copyright (c) 2014 SimonComputing. All rights reserved.
+//  Copyright © 2017 BlackShark Tech. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -20,6 +20,7 @@
 -(void) onMrzCaptureCompleted;
 -(void) onError: (NSString*) errorMessage;
 -(void) onCapturedImage: (UIImage*) image;
+-(void) onCapturedBarcode:(NSString*) barcode;
 
 @optional
 -(void)setPortraitMode:(BOOL) value;

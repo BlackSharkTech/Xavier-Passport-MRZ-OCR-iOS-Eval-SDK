@@ -212,7 +212,7 @@ a. Explicitly specify whether the view controller will be initialized in portrai
 {
 	// Captured Metrics data for analysis purpose    
 }<br>
--(void) <b>onCapturedQr</b>: (NSString*) qrValue
+-(void) <b>onCapturedBarcode</b>: (NSString*) barcode
 {
 	// Barcode data captured
 }
@@ -234,7 +234,7 @@ a. Explicitly specify whether the view controller will be initialized in portrai
 @objc func **onError**(errorMessage: String!) -> Void {
 // MRZ capturing encountered errors
 }<br>
-@objc func onCapturedQr(_ qrValue: String!) {
+@objc func onCapturedBarcode(_barcode: String!) {
 	// Barcode data captured
 }
 </code></pre>

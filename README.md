@@ -8,17 +8,19 @@
 <br>
 **Description**  
 
-The Xavier MRZ SDK contains both Objective-C and Swift demo applications that demonstrate the API calls you can use to interact with the Xavier Library. The Xavier SDK is an iOS framework that enables the developers to integrate the ability to perform OCR i.e. scan on International Civil Aviation Organization (ICAO) compliant two-line passport and three-line ID travel documents. Some sample documents that Xavier SDK can process are:
+The Xavier MRZ SDK contains both Objective-C and Swift demo applications that demonstrate the API calls you can use to interact with the Xavier Library. The Xavier SDK is an iOS framework that enables the developers to integrate the ability to perform OCR i.e. scan on International Civil Aviation Organization (ICAO) compliant two-line passport and three-line ID travel documents, and barcodes. Some sample documents that Xavier SDK can process are:
 <br>
 
 * Passport  
 * Refugee Travel Document  
 * Visa, Resident Alien, Commuter  
-* Re-Entry Permit  
+* Re-Entry Permit
+* 2D and 3d barcodes
+* QR codes
 
-The Xavier MRZ SDK is capable of performing OCR on travel documents via the native camera to extract all the Machine Readable Zone (MRZ) fields from the travel documents. Xavier MRZ SDK performs auto capture when the quality threshold is reached or timeout occurred. The resulting  data are returned as key-value pair elements.
+The Xavier MRZ SDK is capable of performing OCR on travel documents via the native camera to extract all the Machine Readable Zone (MRZ) fields from the travel documents. Xavier MRZ SDK performs auto capture when the quality threshold is reached or a timeout occurred. The resulting data is returned as key-value pair elements.
 
-As of release 1.4, the Xavier engine is also capable of scanning different types of barcodes (one dimensional, QR code etc...). This new feature works seemlessly alongside of the MRZ scanning functionality.
+As of release 1.4, the Xavier engine is also capable of scanning different types of barcodes (one dimensional, two dimensional, QR code etc...). This new feature works seemlessly alongside of the MRZ scanning functionality.
 
 To integrate the Xavier MRZ SDK into your project, you need to include the <b>Xavier.framework</b> and <b>tessdata</b> training folder in your Xcode project (Figure 4). 
 

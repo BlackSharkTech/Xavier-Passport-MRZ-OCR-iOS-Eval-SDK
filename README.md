@@ -3,7 +3,7 @@
 
 ### Xavier MRZ SDK Integration Manual  
 <br>
-### For Xavier iOS SDK 1.4, July 2017   
+### For Xavier iOS SDK 1.4.1, August 2017   
 ### By Blackshark Tech,  6811 Spout Ln, Fairfax Station, VA 22039   
 <br>
 **Description**  
@@ -38,7 +38,11 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 
 1. Download the XavierTestApplication project. This is a self contained Xavier Evaluation project which includes the Xavier.framework for you to run the demo application on the iPhone.
  
-2. Open the XavierTestApplication project using the Xcode IDE and compile the project. To integrate the Xavier.framework into your application, please make sure you have the similar setting as the Xavier Evaluation SDK.  Here are all the Xavier Evaluation SDK settings:
+2. Open the XavierTestApplication project using the Xcode IDE and compile the project. 
+
+3. Add the file iso3.plist from the framework folder to your project.
+
+4. To integrate the Xavier.framework into your application, please make sure you have the similar setting as the Xavier Evaluation SDK.  Here are all the Xavier Evaluation SDK settings:
 <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**General Setting (Figure 1)**
@@ -275,6 +279,11 @@ When an error occurrs, the onError callback will be called.
 Please feel free to contact us at admin@blacksharktech.com for any questions.
 
 #####Release Notes
+<br>
+1.4.1
+<br>
+* Update engine to latest version. Minor accuracy improvement
+<br>
 <br>
 1.4
 <br>

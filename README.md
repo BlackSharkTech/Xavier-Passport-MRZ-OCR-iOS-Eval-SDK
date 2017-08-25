@@ -42,7 +42,9 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 
 3. Add the file iso3.plist from the framework folder to your project.
 
-4. To integrate the Xavier.framework into your application, please make sure you have the similar setting as the Xavier Evaluation SDK.  Here are all the Xavier Evaluation SDK settings:
+4. If you're compiling for devices, please replace the existing Xavier.framework in the project with the one in the folder "Framework-device". The one bundled in the project is for simulator
+
+5. To integrate the Xavier.framework into your application, please make sure you have the similar setting as the Xavier Evaluation SDK.  Here are all the Xavier Evaluation SDK settings:
 <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**General Setting (Figure 1)**

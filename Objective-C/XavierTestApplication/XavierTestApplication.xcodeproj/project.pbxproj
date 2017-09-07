@@ -139,7 +139,7 @@
 				TargetAttributes = {
 					D3DD02801BFE8C6300F3B946 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = Y3LG793X79;
+						DevelopmentTeam = MZTE8253EZ;
 					};
 				};
 			};
@@ -299,7 +299,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = Y3LG793X79;
+				DEVELOPMENT_TEAM = MZTE8253EZ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -327,7 +327,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = Y3LG793X79;
+				DEVELOPMENT_TEAM = MZTE8253EZ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

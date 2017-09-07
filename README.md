@@ -42,7 +42,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 
 3. Add the file iso3.plist from the framework folder to your project.
 
-4. If you're compiling for simulators, please replace the existing Xavier.framework in the project with the one in the folder "Frameworks/Simulator/". The one bundled in the project is for devices.
+4. The framework included in the project is a universal framework for both simulators and devices. If you'd like the version of the framework without the binaries for simulators, please use the one in the folder "Frameworks/Devices/".
 
 5. To integrate the Xavier.framework into your application, please make sure you have the similar setting as the Xavier Evaluation SDK.  Here are all the Xavier Evaluation SDK settings:
 <br>
@@ -281,6 +281,11 @@ When an error occurrs, the onError callback will be called.
 Please feel free to contact us at admin@blacksharktech.com for any questions.
 
 #####Release Notes
+<br>
+1.4.2
+<br>
+* Add universal framework
+<br>
 <br>
 1.4.1
 <br>

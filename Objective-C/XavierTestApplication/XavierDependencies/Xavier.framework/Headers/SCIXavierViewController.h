@@ -38,6 +38,7 @@
  */
 -(SCIXavierViewController *) init;
 -(SCIXavierViewController *) init:(BOOL)portraitMode;
+-(SCIXavierViewController *) init:(BOOL)portraitMode andUseFrontCam:(BOOL)useFrontCam;
 
 
 /**

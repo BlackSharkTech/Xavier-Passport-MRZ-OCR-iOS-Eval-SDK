@@ -3,8 +3,8 @@
 
 ### Xavier MRZ SDK Integration Manual  
 <br>
-### For Xavier iOS SDK 1.4.3, August 2017   
-### By Blackshark Tech,  6811 Spout Ln, Fairfax Station, VA 22039   
+For Xavier iOS SDK 1.4.3, August 2017<br>   
+By Blackshark Tech,  6811 Spout Ln, Fairfax Station, VA 22039   
 <br>
 **Description**  
 
@@ -135,7 +135,6 @@ The plist is used to simplify the Xavier View Controller initialization process
 #####2. Starting up Xavier capturing screen (Please see ViewController.m for integration code usage)  
 #####There are 2 ways to initialize the Xavier View Controller:
 a. Explicitly specify whether the view controller will be initialized in portrait or landscape mode:
-
 	<b>Objective-C:</b>
 <pre><code>
     // NOTE: To request License Key, contact Blackshark Tech (www.blacksharktech.com)
@@ -149,7 +148,6 @@ a. Explicitly specify whether the view controller will be initialized in portrai
         NSLog(@"Xavier View Controller is started");
     }];
  </code></pre>  
- 
  	<b>Swift:</b>
  <pre><code>
     // NOTE: To request License Key, contact Blackshark Tech (www.blacksharktech.com)
@@ -163,7 +161,6 @@ a. Explicitly specify whether the view controller will be initialized in portrai
  </code></pre>
  
  b. Leave out the orientation info and let the constructor pull that from xavier.plist:
- 
 	<b>Objective-C:</b>
 <pre><code>
     // NOTE: To request License Key, contact Blackshark Tech (www.blacksharktech.com) 
@@ -173,7 +170,6 @@ a. Explicitly specify whether the view controller will be initialized in portrai
         NSLog(@"Xavier View Controller is started");
     }];
  </code></pre>  
- 
  	<b>Swift:</b>
  <pre><code>
     // NOTE: To request License Key, contact Blackshark Tech (www.blacksharktech.com)
@@ -181,8 +177,8 @@ a. Explicitly specify whether the view controller will be initialized in portrai
     xavierVC?._clientProtocol = self
     self.presentViewController(xavierVC!, animated: false, completion: {() -> Void in print("Xavier is started")})
  </code></pre>
-<br><b>Note</b>: If the approach in (a) is used to initialize the Xavier view controller then it will always overrride the value specified in the plist
-#####3. The Xavier client callbacks
+<br><b>Note</b>: If the approach in (a) is used to initialize the Xavier view controller then it will always overrride the value specified in the plist<br>
+##### 3. The Xavier client callbacks
 <b>Objective-C:</b>  
 <pre><code> 
 /**
@@ -249,13 +245,11 @@ a. Explicitly specify whether the view controller will be initialized in portrai
 
 #### Use Xavier with the front camera:
 
-Xavier can now be used with the device's front camera. To use this feature, initialize the Xavier controller as follow:
-
+Xavier can now be used with the device's front camera. To use this feature, initialize the Xavier controller as follow: 
     <b>Objective-C:</b>
     <pre><code>
         _xavierViewController = [[SCIXavierViewController alloc] init:false andUseFrontCam:true];
     </code></pre>  
- 
     <b>Swift:</b>
     <pre><code>
         xavierVC = SCIXavierViewController.init(true, andUseFrontCam: true)

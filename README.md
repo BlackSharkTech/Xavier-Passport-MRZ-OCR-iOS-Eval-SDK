@@ -3,7 +3,7 @@
 
 ### Xavier MRZ SDK Integration Manual  
 <br>
-### For Xavier iOS SDK 1.4.1, August 2017   
+### For Xavier iOS SDK 1.4.3, August 2017   
 ### By Blackshark Tech,  6811 Spout Ln, Fairfax Station, VA 22039   
 <br>
 **Description**  
@@ -34,7 +34,7 @@ There is no obligation to purchase the Xavier MRZ SDK.  We invite you to explore
 
 The Xavier Evaluation SDK displays a random pop-up screen to indicate that this is an evaluation version. Please contact Blackshark Tech email address sales@blacksharktech.com for a production license version of Xavier  
 
-####Getting the latest Xavier Evaluation SDK from GitHub  
+#### Getting the latest Xavier Evaluation SDK from GitHub  
 
 1. Download the XavierTestApplication project. This is a self contained Xavier Evaluation project which includes the Xavier.framework for you to run the demo application on the iPhone.
  
@@ -63,7 +63,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Xavier Framework](./readme_images/dependency_framework.jpg)   
 <br>
-####Running Xavier Evaluation SDK application on the iPhone phone  
+#### Running Xavier Evaluation SDK application on the iPhone phone  
 1. Connect the iPhone phone to your laptop via the USB connection. 
 2.  Before running the Xavier Evaluation SDK demo application from the Xcode IDE, make sure the iPhone you are tesing on is properly provisioned.
  
@@ -116,8 +116,8 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
     3. When an error occurred and failed to capture MRZ lines.  It returns an error message in the onError callback.   
  
  <br>
-####Xavier Library Integration Code
-#####1. Property List:
+#### Xavier Library Integration Code
+##### 1. Property List:
 Starting version 1.1, <b>xavier.plist</b> has been introduced as part of the Xavier SDK package. It must be added to any projects utilizing the Xavier framework. 
 <br><br>The plist contains the following fields:<br>
 i. Email Address: The email sent to BlackShark Tech to generated the License Key<br>
@@ -247,7 +247,21 @@ a. Explicitly specify whether the view controller will be initialized in portrai
 }
 </code></pre>
 
-####XML Tag Description
+#### Use Xavier with the front camera:
+
+Xavier can now be used with the device's front camera. To use this feature, initialize the Xavier controller as follow:
+
+    <b>Objective-C:</b>
+    <pre><code>
+        _xavierViewController = [[SCIXavierViewController alloc] init:false andUseFrontCam:true];
+    </code></pre>  
+ 
+    <b>Swift:</b>
+    <pre><code>
+        xavierVC = SCIXavierViewController.init(true, andUseFrontCam: true)
+    </code></pre>
+
+#### XML Tag Description
 The “onCapturedMRZ” callback returns the validated and corrected MRZ.  Attributes are used to indicate validation states and corrected field values.
  
 A ParsedMRZ XML tag is created when an MRZ is parsed.  The lines of an ParsedMRZ are put into an XML tag called “ParsedLineList”.  Each line is put into a “ParsedLine” XML tag.  These are characters that are recognized by the OCR engine in a raw state.  Each line is delimited by a carriage return or line feed.
@@ -269,18 +283,23 @@ Fields found in each “ParsedLine” are put into “ParsedField” tags.   The
 * correctedValue - the corrected value of the field fro the MRZ
 * failedDescriptor - this attribute only appears when a descriptor fails when validating the MRZ.  If there are multiple detected failures, a list of them will be created for the attribute value.
 
-####Sample MRZ result data   
+#### Sample MRZ result data   
 The onRawMrz callback receives the raw MRZ lines.   The onParsedXmlFromlMrz callback receives the parsed MRZ elements in XML format. The onMetrics callbacks receives the collected metrics data.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Metrics](./readme_images/result.jpg)  
 
-####Error Handling  
+#### Error Handling  
 When an error occurrs, the onError callback will be called.
 
-####Additional Information  
+#### Additional Information  
 Please feel free to contact us at admin@blacksharktech.com for any questions.
 
-#####Release Notes
+##### Release Notes
+<br>
+1.4.3
+<br>
+* Expose front camera mode
+<br>
 <br>
 1.4.2
 <br>

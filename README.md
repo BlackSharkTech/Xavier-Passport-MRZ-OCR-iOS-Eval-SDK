@@ -3,7 +3,7 @@
 
 ### Xavier MRZ SDK Integration Manual  
 <br>
-For Xavier iOS SDK 1.4.3, August 2017<br>   
+For Xavier iOS SDK 1.5, August 2017<br>   
 By Blackshark Tech,  6811 Spout Ln, Fairfax Station, VA 22039   
 <br>
 **Description**  
@@ -301,51 +301,34 @@ When an error occurrs, the onError callback will be called.
 Please feel free to contact us at admin@blacksharktech.com for any questions.
 
 ##### Release Notes
-<br>
-1.5
-<br>
+1.5<br>
 * Return result in both XML and JSON format
 * Fix an issue with landscape orientation
 * Performance enhancement
 * Bug fixes
 <br>
-1.4.3
-<br>
+1.4.3<br>
 * Expose front camera mode
 <br>
-<br>
-1.4.2
-<br>
+1.4.2<br>
 * Add universal framework
 <br>
-<br>
-1.4.1
-<br>
-* Update engine to latest version. Minor accuracy improvement
-<br>
-<br>
-1.4
-<br>
-* Add capability to read barcode
-<br>
-1.3
-<br>
-* Add new plist properties to improve performance
-<br>
-1.2.0
-<br>
-* Minor bug fixes
-<br>
-1.1.0
-<br>
+1.4.1<br>
+* Update engine to latest version. Minor accuracy improvement<br>
+1.4<br>
+* Add capability to read barcode<br>
+1.3<br>
+* Add new plist properties to improve performance<br>
+1.2.0<br>
+* Minor bug fixes<br>
+1.1.0<br>
 * Added portrait capture mode
 * Added support for Apple Tablets.
 * Updated to Tesseract 3.03
 * Added configuration through Plist
 <br>
-1.0.0    
-Initial release of Xavier Evaluation SDK  
-<br>
+1.0.0<br>  
+Initial release of Xavier Evaluation SDK  <br>
 © 2017 Blackshark Tech All Rights Reserved.
 
 

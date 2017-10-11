@@ -29,6 +29,8 @@ Thumbs.db
 
 *.xcuserstate
 
+*.xcbkptlist
+
 /Swift/XavierTestApplication/*.plist
 /Swift/XavierTestApplication_iPad/*.plist
 /Objective-C/XavierTestApplication/*.plist

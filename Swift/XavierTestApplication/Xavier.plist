@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Maximum MRZ candidates</key>
+	<integer>50</integer>
+	<key>OCR Timeout</key>
+	<integer>20</integer>
+	<key>Torch light on</key>
+	<dict>
+		<key>Mrz</key>
+		<false/>
+		<key>Serial</key>
+		<false/>
+	</dict>
 	<key>target capture</key>
 	<string>mrz</string>
 	<key>company logo image</key>

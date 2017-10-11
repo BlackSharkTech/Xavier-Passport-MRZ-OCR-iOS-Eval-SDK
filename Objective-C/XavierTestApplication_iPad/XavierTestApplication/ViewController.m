@@ -140,6 +140,17 @@ SCIXavierViewController *_xavierViewController;
 }
 
 
+-(void) onParsedJsonFromlMrz:(NSString *)parsedJsonFromlMrz
+{
+    NSLog(@"\n\n=====> onParsedJsonFromlMrz() - %@", parsedJsonFromlMrz);
+    
+    [self insertToTextView :@"JSON from MRZ:\n"];
+    [self insertToTextView :@"===========\n"];
+    
+    [self insertToTextView :parsedJsonFromlMrz];
+    [self insertToTextView :@"\n"];
+}
+
 /**
  * onParsedXmlFromlMrz - SCIXavierClientProtocol implementation
  */
@@ -147,11 +158,13 @@ SCIXavierViewController *_xavierViewController;
 {
     NSLog(@"\n\n=====> onParsedXmlFromlMrz() - %@", parsedXmFromlMrz);
     
-    [self insertToTextView :@"XML from MRZ:\n"];
-    [self insertToTextView :@"===========\n"];
-    
-    [self insertToTextView :parsedXmFromlMrz];
-    [self insertToTextView :@"\n"];
+    /*Uncomment this code to return result as XML
+     [self insertToTextView :@"XML from MRZ:\n"];
+     [self insertToTextView :@"===========\n"];
+     
+     [self insertToTextView :parsedXmFromlMrz];
+     [self insertToTextView :@"\n"];
+     */
 }
 
 
@@ -180,6 +193,18 @@ SCIXavierViewController *_xavierViewController;
     [self insertToTextView :@"Image analysis average duration: "];
     [self insertToTextView :[NSString stringWithFormat:@"%f", metrics.imageAnalysis]];
     [self insertToTextView :@" (secs)\n"];
+    [self insertToTextView :@"\n"];
+    
+}
+
+- (void) onCapturedBarcode:(NSString *)barcode
+{
+    NSLog(@"\n\n=====> onCapturedBarcode() - %@", barcode);
+    
+    [self insertToTextView :@"Barcode:\n"];
+    [self insertToTextView :@"===========\n"];
+    
+    [self insertToTextView :barcode];
     [self insertToTextView :@"\n"];
     
 }

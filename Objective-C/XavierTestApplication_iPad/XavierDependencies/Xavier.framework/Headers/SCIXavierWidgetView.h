@@ -1,6 +1,6 @@
 //
 //  SCIXavierWidget.h
-//  Copyright (c) 2014 SimonComputing. All rights reserved.
+//  Copyright © 2017 BlackShark Tech. All rights reserved.
 //
 
 
@@ -13,6 +13,7 @@
 -(void) drawFocusSymbol: (BOOL) val;
 -(CGPoint) getFocusPoint;
 -(void) displayStatusMsg:(NSString*) status;
+-(void) showGlareScore:(float)glareScore;
 
 @end
 

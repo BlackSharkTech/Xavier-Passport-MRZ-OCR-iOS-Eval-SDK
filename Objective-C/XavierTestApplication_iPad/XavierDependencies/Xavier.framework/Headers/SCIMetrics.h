@@ -1,7 +1,7 @@
 //
 //  SCImetrics.h
 //
-//  Copyright (c) 2014 SimonComputing. All rights reserved.
+//  Copyright © 2017 BlackShark Tech. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

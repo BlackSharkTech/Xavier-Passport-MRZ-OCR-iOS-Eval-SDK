@@ -47,15 +47,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDocumentsDirectory() -> NSURL {
-        return NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last!
+        return FileManager.default.URLsForDirectory(FileManager.SearchPathDirectory.DocumentDirectory, inDomains: FileManager.SearchPathDomainMask.UserDomainMask).last!
     }
     
     func manageObjectModel() -> NSManagedObjectModel? {
         if( self.managedObjectModel != nil) {
             return self.managedObjectModel!
         }
-        let modelURL:NSURL = NSBundle.mainBundle().URLForResource("XavierTestApp", withExtension: "momd")!
-        managedObjectModel = NSManagedObjectModel(contentsOfURL: modelURL)
+        let modelURL:NSURL = Bundle.main.url(forResource: "XavierTestApp", withExtension: "momd")! as NSURL
+        managedObjectModel = NSManagedObjectModel(contentsOf: modelURL as URL)
         return managedObjectModel!
     }
     
@@ -65,11 +65,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.manageObjectModel()!)
-        let storeUrl = self.applicationDocumentsDirectory().URLByAppendingPathComponent("XavierTestApp.sqlite")
+        let storeUrl = self.applicationDocumentsDirectory().appendingPathComponent("XavierTestApp.sqlite")
         let errors:NSError? = nil
         let failureReason:String? = "There was an error creating or loading the application's saved data."
         do {
-            try persistentStoreCoordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeUrl, options: nil)
+            try persistentStoreCoordinator!.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeUrl, options: nil)
         } catch _ {
             let dict:NSMutableDictionary = [NSLocalizedDescriptionKey:"Failed to initialize the application's saved data", NSLocalizedFailureReasonErrorKey:failureReason!, NSUnderlyingErrorKey:errors!]
             let errors = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict as [NSObject : AnyObject])
@@ -88,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(coordinator == nil) {
             return nil
         }
-        managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+        managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyTypemainQueueConcurrencyType)
         managedObjectContext?.persistentStoreCoordinator = coordinator
         return managedObjectContext!
     }

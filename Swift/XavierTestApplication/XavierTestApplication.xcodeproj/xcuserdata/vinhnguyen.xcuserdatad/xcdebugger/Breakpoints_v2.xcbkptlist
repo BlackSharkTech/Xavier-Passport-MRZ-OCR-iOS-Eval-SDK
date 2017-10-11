@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XavierTestApplication/XavierViewController.swift"
-            timestampString = "488155427.600525"
+            timestampString = "529381868.608202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "XavierTestApplication/XavierViewController.swift"
-            timestampString = "488155427.600525"
+            timestampString = "529381868.608732"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "onCapturedImage(_:)"
             landmarkType = "7">
          </BreakpointContent>

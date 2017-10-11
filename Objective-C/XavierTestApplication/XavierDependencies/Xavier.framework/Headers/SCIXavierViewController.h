@@ -17,6 +17,7 @@
 @required
 -(void) onRawMrz: (NSString*) rawMrz;
 -(void) onParsedXmlFromlMrz: (NSString*) parsedXmFromlMrz;
+-(void) onParsedJsonFromlMrz: (NSString*) parsedJsonFromlMrz;
 -(void) onMrzCaptureCompleted;
 -(void) onError: (NSString*) errorMessage;
 -(void) onCapturedImage: (UIImage*) image;

@@ -13,6 +13,7 @@
 -(void) drawFocusSymbol: (BOOL) val;
 -(CGPoint) getFocusPoint;
 -(void) displayStatusMsg:(NSString*) status;
+-(void) showGlareScore:(float)glareScore;
 
 @end
 

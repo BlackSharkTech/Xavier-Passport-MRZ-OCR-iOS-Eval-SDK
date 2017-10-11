@@ -1,7 +1,7 @@
 //
 //  ImageProcessor.h
 //
-//  Copyright (c) 2014 SimonComputing. All rights reserved.
+//  Copyright © 2017 BlackShark Tech. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -13,6 +13,7 @@
 -(void) onParsedMrzTextBlob: (NSString*) parsedMrzTextBlob cleanedImage:(UIImage*) image;
 -(void) onStartImageOcr;
 -(void) onUnrecognizedMRZBlob;
+-(void) onGlareDetected:(float)glareScore;
 
 @optional
 

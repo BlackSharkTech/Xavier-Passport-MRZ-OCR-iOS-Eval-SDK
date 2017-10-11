@@ -13,6 +13,7 @@
 -(void) onParsedMrzTextBlob: (NSString*) parsedMrzTextBlob cleanedImage:(UIImage*) image;
 -(void) onStartImageOcr;
 -(void) onUnrecognizedMRZBlob;
+-(void) onGlareDetected:(float)glareScore;
 
 @optional
 

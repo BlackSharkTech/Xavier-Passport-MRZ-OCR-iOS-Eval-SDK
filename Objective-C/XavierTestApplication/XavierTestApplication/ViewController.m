@@ -149,6 +149,16 @@ SCIXavierViewController *_xavierViewController;
     [self insertToTextView :errorMessage];
 }
 
+-(void) onParsedJsonFromlMrz:(NSString *)parsedJsonFromlMrz
+{
+    NSLog(@"\n\n=====> onParsedJsonFromlMrz() - %@", parsedJsonFromlMrz);
+    
+    [self insertToTextView :@"JSON from MRZ:\n"];
+    [self insertToTextView :@"===========\n"];
+    
+    [self insertToTextView :parsedJsonFromlMrz];
+    [self insertToTextView :@"\n"];
+}
 
 /**
  * onParsedXmlFromlMrz - SCIXavierClientProtocol implementation
@@ -156,12 +166,14 @@ SCIXavierViewController *_xavierViewController;
 -(void) onParsedXmlFromlMrz: (NSString*) parsedXmFromlMrz
 {
     NSLog(@"\n\n=====> onParsedXmlFromlMrz() - %@", parsedXmFromlMrz);
-    
+
+    /*Uncomment this code to return result as XML
     [self insertToTextView :@"XML from MRZ:\n"];
     [self insertToTextView :@"===========\n"];
     
     [self insertToTextView :parsedXmFromlMrz];
     [self insertToTextView :@"\n"];
+     */
 }
 
 

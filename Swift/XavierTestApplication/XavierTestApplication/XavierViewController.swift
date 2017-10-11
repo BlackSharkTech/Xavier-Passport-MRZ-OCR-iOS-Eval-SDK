@@ -9,8 +9,8 @@ import UIKit
 import Foundation
 
 class XavierViewController: UIViewController, SCIXavierClientProtocol, XMLParserDelegate, UIScrollViewDelegate {
+    
     fileprivate var xavierVC:SCIXavierViewController?
-    fileprivate var isGun:Bool?
     fileprivate var reImage:UIImage?
     
     @IBOutlet weak var startBtn: UIButton!
@@ -33,26 +33,6 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, XMLParser
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.viewController = self
-        
-        var format = PropertyListSerialization.PropertyListFormat.xml //format of the property list
-        var plistData:[String:AnyObject] = [:]  //our data
-        let plistPath:String? = Bundle.main.path(forResource: "Xavier", ofType: "plist")! //the path of the data
-        let plistXML = FileManager.default.contents(atPath: plistPath!)! //the data in XML format
-        do{ //convert the data to a dictionary and handle errors.
-            plistData = try PropertyListSerialization.propertyList(from: plistXML,options: .mutableContainersAndLeaves,format: &format)as! [String:AnyObject]
-            
-            let target = plistData["target capture"] as! String
-            
-            if(target == "gun serial") {
-                isGun = true
-            } else {
-                isGun = false
-            }
-        }
-        catch{ // error condition
-            print("Error reading plist: \(error), format: \(format)")
-        }
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,13 +42,8 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, XMLParser
     }
     
     @objc func onRawMrz(_ rawMrz: String!) -> Void {
-        if(isGun == false) {
-            print("\n=====> onRawMrz() - \(rawMrz)")
-            self.insertToTextView("Raw MRZ:\n")
-        } else {
-            print("\n=====>  onRawSerial- \(rawMrz)")
-            self.insertToTextView("Raw Serial No:\n")
-        }
+        print("\n=====> onRawMrz() - \(rawMrz)")
+        self.insertToTextView("Raw MRZ:\n")
         
         self.insertToTextView("========\n")
         
@@ -76,20 +51,27 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, XMLParser
         self.insertToTextView("\n")
     }
     
+    @objc func onParsedJsonFromlMrz(_ parsedJsonFromlMrz: String!) {
+        print("\n=====> onParsedJsonFromlMrz() - \(parsedJsonFromlMrz)")
+        
+        self.insertToTextView("JSON from MRZ:\n")
+        self.insertToTextView("===========\n")
+        self.insertToTextView(parsedJsonFromlMrz as NSString!)
+        
+        self.insertToTextView("\n")
+    }
+    
     @objc func onParsedXmlFromlMrz(_ parsedXmFromlMrz: String!) -> Void {
-        if(isGun == false) {
-            print("\n=====> onParsedXmlFromlMrz() - \(parsedXmFromlMrz)")
-            
-            self.insertToTextView("XML from MRZ:\n")
-            self.insertToTextView("===========\n")
-            self.insertToTextView(parsedXmFromlMrz as NSString!)
-        } else {
-            print("\n=====> onParsedFromSerial() - \(parsedXmFromlMrz)")
-            
-            self.insertToTextView("\n")
-        }
+        print("\n=====> onParsedXmlFromlMrz() - \(parsedXmFromlMrz)")
+        
+        /* Uncomment this code to output data in XML format
+        self.insertToTextView("XML from MRZ:\n")
+        self.insertToTextView("===========\n")
+        self.insertToTextView(parsedXmFromlMrz as NSString!)
+
 
         self.insertToTextView("\n")
+        */
     }
     
     @objc func onMetrics(_ metrics: SCIMetrics!) -> Void{
@@ -140,6 +122,7 @@ class XavierViewController: UIViewController, SCIXavierClientProtocol, XMLParser
     @objc func onCapturedBarcode(_ barcode: String!) {
         print("\n=====> onCaptureBarcode() - \(barcode)")
         self.insertToTextView(barcode as NSString!)
+        self.insertToTextView("\n")
     }
     
     func startXavier() -> Void {

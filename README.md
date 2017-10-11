@@ -22,6 +22,8 @@ The Xavier MRZ SDK is capable of performing OCR on travel documents via the nati
 
 As of release 1.4, the Xavier engine is also capable of scanning different types of barcodes (one dimensional, two dimensional, QR code etc...). This new feature works seemlessly alongside of the MRZ scanning functionality.
 
+Starting release 1.5, the Xavier engine will now return result in both XML and JSON format
+
 To integrate the Xavier MRZ SDK into your project, you need to include the <b>Xavier.framework</b> and <b>tessdata</b> training folder in your Xcode project (Figure 4). 
 
 The provided demo project was created using <b>Xcode 7.2.1</b> IDE. Please download the XavierTestApplication and follow the instructions below on setting up and running the Xavier MRZ SDK demo application in Xcode IDE. The project is configured to compile at iOS 9.  
@@ -123,7 +125,7 @@ Starting version 1.1, <b>xavier.plist</b> has been introduced as part of the Xav
 i. Email Address: The email sent to BlackShark Tech to generated the License Key<br>
 ii. License Key: The license key obtained from Blackshark Tech to enable Xavier<br>
 iii. Portrait Mode: Specify whether Xavier should be used in portrait mode<br>
-iv. previewing UIColor: Specify the color of the preview box for the Xaveir widget. The value has to be of type UIColor<br>
+iv. previewing UIColor: Specify the color of the preview box for the Xavier widget. The value has to be of type UIColor<br>
 v. mrz detected UIColor: Specify the color of the preview box when the target MRZ is detected. The value has to be of type UIColor<br>
 vi. close button text: Specify the display text of the close button on the Xavier widget<br>
 vii. company logo image: Specify the image to be used for the company logo. This is displayed on the top left corner (landscape mode) and top right corner (portrait mode) of the Xavier widget<br>
@@ -210,6 +212,13 @@ a. Explicitly specify whether the view controller will be initialized in portrai
 	// Parsed MRZ in XML format
 }<br>
 /**
+ * onParsedJsonFromlMrz - SCIXavierClientProtocol implementation
+ */
+-(void) <b>onParsedXmlFromlMrz</b>: (NSString*) parsedXmFromlMrz
+{
+    // Parsed MRZ in JSON format
+}<br>
+/**
  * onMetrics - SCIXavierClientProtocol implementation
  */
 -(void) <b>onMetrics</b>: (SCIMetrics*) metrics
@@ -227,13 +236,16 @@ a. Explicitly specify whether the view controller will be initialized in portrai
 	//Raw MRZ lines
 }<br/>
 @objc func **onParsedXmlFromlMrz**(parsedXmFromlMrz: String!) -> Void {
-//MRZ capture complete event 
+// Parsed MRZ in XML format
+}<br/>
+@objc func **onParsedJsonFromlMrz**(parsedJsonFromlMrz: String!) -> Void {
+// Parsed MRZ in JSON format
 }<br/>
 @objc func onMetrics(metrics: SCIMetrics!) -> Void {
 // Captured Metrics data for analysis purpose
 }<br/>
 @objc func **onMrzCaptureCompleted**() -> Void {
-// Parsed MRZ in XML format
+//MRZ capture complete event 
 }<br>
 @objc func **onError**(errorMessage: String!) -> Void {
 // MRZ capturing encountered errors
@@ -289,6 +301,13 @@ When an error occurrs, the onError callback will be called.
 Please feel free to contact us at admin@blacksharktech.com for any questions.
 
 ##### Release Notes
+<br>
+1.5
+<br>
+* Return result in both XML and JSON format
+* Fix an issue with landscape orientation
+* Performance enhancement
+* Bug fixes
 <br>
 1.4.3
 <br>

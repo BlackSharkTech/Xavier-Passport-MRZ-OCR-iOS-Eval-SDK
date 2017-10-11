@@ -2,19 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Glare Sensitity</key>
-	<false/>
-	<key>Glare Sensitity Level</key>
-	<real>1.3</real>
 	<key>Maximum MRZ candidates</key>
-	<string>15</string>
+	<integer>50</integer>
 	<key>OCR Timeout</key>
-	<string>5</string>
+	<integer>20</integer>
 	<key>Torch light on</key>
 	<dict>
-		<key>Serial</key>
-		<true/>
 		<key>Mrz</key>
+		<false/>
+		<key>Serial</key>
 		<false/>
 	</dict>
 	<key>target capture</key>
@@ -26,17 +22,15 @@
 	<key>company logo width</key>
 	<integer>0</integer>
 	<key>previewing UIColor</key>
-	<string>blueColor</string>
-	<key>glare detected UIColor</key>
-	<string>yellowColor</string>
+	<string>blueColor or any other [UIColor]</string>
 	<key>mrz detected UIColor</key>
-	<string>greenColor</string>
+	<string>greenColor or any other [UIColor]</string>
 	<key>close button text</key>
 	<string>Close</string>
 	<key>email address</key>
-	<string>xavier@simoncomputing.com</string>
+	<string>test@hotmail.com</string>
 	<key>license key</key>
-	<string>P239795412</string>
+	<string>E12345678</string>
 	<key>portrait mode</key>
 	<true/>
 </dict>

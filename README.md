@@ -301,6 +301,9 @@ When an error occurrs, the onError callback will be called.
 Please feel free to contact us at admin@blacksharktech.com for any questions.
 
 ##### Release Notes
+1.6<br>
+* Fix stability issue
+<br>
 1.5<br>
 * Return result in both XML and JSON format
 * Fix an issue with landscape orientation

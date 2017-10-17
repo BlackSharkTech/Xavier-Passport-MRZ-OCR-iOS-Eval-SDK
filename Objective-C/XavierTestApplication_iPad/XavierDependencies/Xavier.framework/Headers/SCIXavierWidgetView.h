@@ -24,6 +24,7 @@ typedef void (^WidgetCompleted)(void);
 - (id)init: (UIView*) previewBoxView
         andParentFrameRect:(CGRect)frameRect
         withWidgetCompletedBlock:(WidgetCompleted) widgetCompleteCallback;
+-(void)close;
 
 @property (nonatomic, weak) id <SCIXavierWidgetProtocol> _widgetProtocol;
 

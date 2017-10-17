@@ -13,6 +13,7 @@
 -(void) drawFocusSymbol: (BOOL) val;
 -(CGPoint) getFocusPoint;
 -(void) displayStatusMsg:(NSString*) status;
+-(void) showGlareScore:(float)glareScore;
 
 @end
 
@@ -23,6 +24,7 @@ typedef void (^WidgetCompleted)(void);
 - (id)init: (UIView*) previewBoxView
         andParentFrameRect:(CGRect)frameRect
         withWidgetCompletedBlock:(WidgetCompleted) widgetCompleteCallback;
+-(void)close;
 
 @property (nonatomic, weak) id <SCIXavierWidgetProtocol> _widgetProtocol;
 

@@ -4,8 +4,9 @@
 ### Xavier MRZ SDK Integration Manual  
 <br>
 For Xavier iOS SDK 1.5, August 2017<br>   
-By Blackshark Tech,  6811 Spout Ln, Fairfax Station, VA 22039   
+By Blackshark Tech, Fairfax Station, VA
 <br>
+
 **Description**  
 
 The Xavier MRZ SDK contains both Objective-C and Swift demo applications that demonstrate the API calls you can use to interact with the Xavier Library. The Xavier SDK is an iOS framework that enables the developers to integrate the ability to perform OCR i.e. scan on International Civil Aviation Organization (ICAO) compliant two-line passport and three-line ID travel documents, and barcodes. Some sample documents that Xavier SDK can process are:
